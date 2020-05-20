@@ -5,10 +5,15 @@
 ## Author: Gordon Blasco
 ##################################################
 
+## Load libraries
+##################################################
+library(tidyverse)
+library(stringr)
+
 ## Load raw data from fao
 ##################################################
 
-source("~/github/aquaculture/src/directories.R") # Sets file directories 
+#source("~/github/aquaculture/src/directories.R") # Sets file directories 
 fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
 fao_country <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) # Species ref
 
@@ -43,7 +48,6 @@ fao_species <- fao_species %>%
 fao_species$id_level[is.na(fao_species$id_level)] <- "Nei" # everything else is an NEI
 
 
-
 ## Section: look at taxonkeys
 ##################################################
 tax <- fao_species %>% 
@@ -53,17 +57,20 @@ tax <- fao_species %>%
                             x_s==2 & length == 10 ~ "genus",
                             x_s==5 & length == 10 ~ "family",
                             x_s==7 & length == 10 ~ "order")) %>% 
-  left_join(., nei_prep) %>% 
-  select(SPECIES, Taxonomic_Code, id_level, tax_id, nei_levels, length, x_s, Scientific_Name, everything()) %>% 
-  filter(tax_id == nei_levels)
-  filter(is.na(tax_id))
+  filter(tax_id == "species")
+
+
+  # left_join(., nei_prep) %>%
+  # fitler()
+  # select(SPECIES, Taxonomic_Code, id_level, tax_id, nei_levels, length, x_s, Scientific_Name, everything()) %>%
+  # filter(tax_id == nei_levels)
+  # filter(is.na(tax_id))
 
 
 
 
 ## Break up NEI's by taxonomic resolution
 ##################################################
-
 nei_genus <- fao_species %>% 
   filter(id_level == "Nei") %>% 
   mutate(nei_levels = case_when(
@@ -107,4 +114,13 @@ nei_levels <- nei_genus %>%
 nei_prep <- nei_levels %>% 
   select(SPECIES,nei_levels)
 
+nei_final <- fao_species %>% 
+  left_join(nei_prep) %>% 
+  mutate(excluded = if_else(
+    CPC_Class == "Coral and similar products, shells of molluscs, crustaceans or echinoderms and cuttle-bone; live aquatic plants and animals for ornamental purpose", 
+    "excluded", "included"
+  )) %>% 
+  select(SPECIES, id_level, nei_levels, excluded)
+
+write_csv(nei_final, "data/nei_codes.csv")
 
