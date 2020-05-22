@@ -1,0 +1,2342 @@
+alpha_code,resolved_sci_name
+LAU,Petromyzon marinus
+LAR,Lampetra fluviatilis
+LAS,Petromyzontidae
+MYG,Myxine glutinosa
+MWC,Eptatretus cirrhatus
+MYX,Myxinidae
+SBL,Hexanchus griseus
+HXT,Heptranchias perlo
+NTC,Notorynchus cepedianus
+BSK,Cetorhinus maximus
+CCT,Carcharias taurus
+PSK,Pseudocarcharias kamoharai
+ALV,Alopias vulpinus
+PTH,Alopias pelagicus
+BTH,Alopias superciliosus
+THR,Alopias
+SMA,Isurus oxyrinchus
+LMA,Isurus paucus
+MAK,Isurus
+POR,Lamna nasus
+WSH,Carcharodon carcharias
+MSK,Lamnidae
+GNC,Ginglymostoma cirratum
+SHO,Galeus melastomus
+GAM,Galeus murinus
+SYC,Scyliorhinus canicula
+SYT,Scyliorhinus stellaris
+SCL,Scyliorhinus
+HAN,Halaelurus canescens
+CPS,Cephaloscyllium isabellum
+SYX,Scyliorhinidae
+BSH,Prionace glauca
+CCP,Carcharhinus plumbeus
+CCL,Carcharhinus limbatus
+CCN,Carcharhinus acronotus
+OCS,Carcharhinus longimanus
+CCR,Carcharhinus porosus
+CCD,Carcharhinus dussumieri
+DUS,Carcharhinus obscurus
+FAL,Carcharhinus falciformis
+CCE,Carcharhinus leucas
+BRO,Carcharhinus brachyurus
+CCB,Carcharhinus brevipinna
+CCS,Carcharhinus signatus
+CCO,Carcharhinus isodon
+CCQ,Carcharhinus sorrah
+TIG,Galeocerdo cuvier
+NGB,Negaprion brevirostris
+RHT,Rhizoprionodon terraenovae
+RHA,Rhizoprionodon acutus
+RHL,Rhizoprionodon lalandii
+RHR,Rhizoprionodon porosus
+RSK,Carcharhinidae
+SPZ,Sphyrna zygaena
+SPL,Sphyrna lewini
+SPJ,Sphyrna tiburo
+SPK,Sphyrna mokarran
+SPY,Sphyrnidae
+CTU,Mustelus antarcticus
+CTI,Mustelus canis
+CTK,Mustelus henlei
+MTL,Mustelus lenticulatus
+SDP,Mustelus schmitti
+SMD,Mustelus mustelus
+SDS,Mustelus asterias
+SDV,Mustelus
+GAG,Galeorhinus galeus
+LES,Triakis semifasciata
+TTE,Triakis megalopterus
+THJ,Hemitriakis japanica
+HEI,Paragaleus pectoralis
+CLL,Leptocharias smithii
+CPG,Gollum attenuatus
+GSK,Somniosus microcephalus
+SOR,Somniosus rostratus
+SON,Somniosus pacificus
+QUB,Squalus blainville
+DGS,Squalus acanthias
+GUP,Centrophorus granulosus
+GUQ,Centrophorus squamosus
+CPL,Centrophorus lusitanicus
+ETX,Etmopterus spinax
+ETR,Etmopterus princeps
+SHL,Etmopterus
+DCA,Deania calcea
+SDU,Deania profundorum
+CYO,Centroscymnus coelolepis
+CYP,Centroscymnus crepidater
+CYW,Centroscymnus owstoni
+CYU,Centroscymnus plunketi
+SYR,Scymnodon ringens
+SCK,Dalatias licha
+CFB,Centroscyllium fabricii
+DGX,Squalidae
+DGH,Squalidae
+PWS,Pristiophorus
+AGN,Squatina squatina
+SUG,Squatina argentina
+SUC,Squatina californica
+ASK,Squatinidae
+OXY,Oxynotus centrina
+OXN,Oxynotus paradoxus
+SHB,Echinorhinus brucus
+RCA,Rhynchobatus australiae
+RCD,Rhynchobatus djiddensis
+RBC,Rhinobatos cemiculus
+GUD,Rhinobatos percellens
+GUF,Rhinobatos planiceps
+RBX,Rhinobatos rhinobatos
+GTF,Rhinobatidae
+SAW,Pristidae
+RJB,Raja batis
+RJC,Raja clavata
+RJR,Raja radiata
+RJM,Raja montagui
+RJH,Raja brachyura
+RJI,Raja circularis
+RJF,Raja fullonica
+RJE,Raja microocellata
+RJN,Raja naevus
+RJO,Raja oxyrinchus
+RJU,Raja undulata
+RFA,Raja taaf
+RJA,Raja alba
+RJY,Raja fyllae
+SRR,Raja georgiana
+JRS,Raja asterias
+JRI,Raja binoculata
+JRT,Raja castelnaui
+JRY,Raja cyclophora
+RJD,Raja erinacea
+RJG,Raja hyperborea
+RJK,Raja lintea
+JFY,Raja maderensis
+JAI,Raja miraletus
+JAD,Raja nidarosiensis
+BEA,Bathyraja eatonii
+BAM,Bathyraja maccaini
+BMU,Bathyraja murrayi
+BYR,Bathyraja irrasa
+BYE,Bathyraja meridionalis
+BZB,Bathyraja brachyurops
+BZM,Bathyraja macloviana
+BHY,Bathyraja
+DPQ,Dipturus innominatus
+ZRN,Zearaja nasuta
+DPV,Zearaja chilensis
+RRW,Rioraja agassizi
+YBQ,Sympterygia bonapartii
+YAW,Sympterygia acuta
+RAJ,Rajidae
+WST,Dasyatis akajei
+RDA,Dasyatis americana
+RDC,Dasyatis centroura
+PLS,Dasyatis violacea
+RDL,Dasyatis longa
+JDP,Dasyatis pastinaca
+STI,Dasyatis
+DHG,Himantura gerrardi
+STT,Dasyatidae
+QEX,Potamotrygon
+MAE,Aetobatus narinari
+MYL,Myliobatis aquila
+MRB,Rhinoptera bonasus
+MRM,Rhinoptera marginata
+EAG,Myliobatidae
+RMB,Manta birostris
+RMM,Mobula mobular
+MAN,Mobulidae
+RGL,Gymnura altavela
+RGM,Gymnura marmorata
+RGI,Gymnura micrura
+SRX,Rajiformes
+TOE,Torpedo
+CMO,Chimaera monstrosa
+CMH,Chimaera phantasma
+RAT,Hydrolagus colliei
+CYV,Hydrolagus novaezealandiae
+HYD,Hydrolagus
+RCT,Rhinochimaera atlantica
+CHB,Callorhinchus milii
+CHJ,Callorhinchus callorynchus
+CHM,Callorhinchus capensis
+CAH,Callorhinchidae
+HOL,Chimaeriformes
+PPB,Protopterus aethiopicus
+FLU,Protopterus
+APG,Acipenser gueldenstaedtii
+AAA,Acipenser naccarii
+APR,Acipenser ruthenus
+APE,Acipenser stellatus
+AAN,Acipenser nudiventris
+APN,Acipenser transmontanus
+APB,Acipenser baerii
+AAM,Acipenser medirostris
+HUH,Huso huso
+STU,Acipenseridae
+PAM,Polyodon spathula
+AAC,Amia calva
+JTP,Atractosteus tropicus
+LKX,Atractosteus
+LXS,Lepisosteidae
+HER,Clupea harengus
+HEP,Clupea pallasii
+AGS,Amblygaster sirm
+CUI,Alosa caspia
+SHC,Alosa pontica
+SHA,Alosa sapidissima
+ASD,Alosa alosa
+TSD,Alosa fallax
+ALE,Alosa pseudoharengus
+BBH,Alosa aestivalis
+SHH,Alosa mediocris
+SHZ,Alosa
+SAG,Sardinella gibbosa
+IOS,Sardinella longiceps
+SAA,Sardinella aurita
+SAE,Sardinella maderensis
+JSS,Sardinella zunasi
+SAM,Sardinella lemuru
+BSR,Sardinella brasiliensis
+SIX,Sardinella
+JAP,Sardinops melanostictus
+CPI,Sardinops caeruleus
+CHP,Sardinops sagax
+PIA,Sardinops ocellatus
+SRP,Sardinops neopilchardus
+ASP,Caspialosa
+SIA,Stolothrissa tanganicae
+SHG,Dorosoma cepedianum
+CDA,Dorosoma petenense
+DQX,Dorosoma
+CHG,Anodontostoma chacunda
+MHS,Brevoortia aurea
+MHP,Brevoortia pectinata
+MHA,Brevoortia tyrannus
+MHG,Brevoortia patronus
+RAS,Dussumieria acuta
+RAL,Dussumieria elopsoides
+BOA,Ethmalosa fimbriata
+RRH,Etrumeus teres
+WRR,Etrumeus whiteheadi
+HCT,Harengula thrissina
+SAS,Harengula
+HIX,Hilsa kelee
+HIL,Tenualosa ilisha
+TOL,Tenualosa toli
+CNS,Nematalosa nasus
+THP,Opisthonema libertate
+THA,Opisthonema oglinum
+SRH,Spratelloides gracilis
+DAS,Clupanodon thrissa
+CLA,Clupeonella cultriventris
+DOD,Konosirus punctatus
+LCS,Lile stolifera
+PIL,Sardina pilchardus
+SPR,Sprattus sprattus
+FAS,Sprattus fuegensis
+MES,Ethmidium maculatum
+HES,Herklotsichthys
+LTM,Limnothrissa miodon
+CKI,Strangomera bentincki
+CLP,Clupeidae
+DAG,Stolothrissa
+ANE,Engraulis encrasicolus
+JAN,Engraulis japonicus
+ANA,Engraulis anchoita
+NPA,Engraulis mordax
+VET,Engraulis ringens
+ANC,Engraulis capensis
+STL,Encrasicholina punctifer
+AVA,Cetengraulis edentulus
+VEP,Cetengraulis mysticetus
+EAM,Anchoa marinii
+EAN,Anchoa nasus
+ENP,Anchoa hepsetus
+ANR,Lycengraulis grossidens
+STO,Stolephorus
+ANX,Engraulidae
+DOB,Chirocentrus dorab
+CNU,Chirocentrus nudus
+DOS,Chirocentrus
+EIL,Ilisha elongata
+ILI,Ilisha africana
+PEQ,Pellona flavipinnis
+PEO,Pellona ditchela
+DCX,Clupeoidei
+CLU,Clupeoidei
+MIL,Chanos chanos
+SAL,Salmo salar
+TRS,Salmo trutta
+SFI,Salmo ischchan
+TRO,Salmo
+ONA,Oncorhynchus aguabonita
+PIN,Oncorhynchus gorbuscha
+CHU,Oncorhynchus keta
+CHE,Oncorhynchus masou
+SOC,Oncorhynchus nerka
+CHI,Oncorhynchus tshawytscha
+COH,Oncorhynchus kisutch
+TRR,Oncorhynchus mykiss
+ORC,Oncorhynchus
+SVF,Salvelinus fontinalis
+ACH,Salvelinus alpinus
+LAT,Salvelinus namaycush
+CHR,Salvelinus
+HUC,Hucho hucho
+SLZ,Salmonidae
+TLV,Thymallus thymallus
+PCA,Plecoglossus altivelis
+CAP,Mallotus villosus
+SME,Osmerus eperlanus
+SMR,Osmerus mordax
+PSM,Hypomesus olidus
+SUS,Hypomesus pretiosus
+HVJ,Hypomesus nipponensis
+EUL,Thaleichthys pacificus
+SMX,"Osmerus spp, Hypomesus spp"
+ARU,Argentina silus
+ARY,Argentina sphyraena
+ARG,Argentina
+DES,Glossanodon semifasciatus
+PRS,Protosalanx hyalocranius
+SZM,Salangichthys microdon
+FVE,Coregonus albula
+PLN,Coregonus lavaretus
+HOU,Coregonus oxyrinchus
+WHL,Coregonus clupeaformis
+CIS,Coregonus artedi
+CIJ,Coregonus peled
+WHF,Coregonus
+PCY,Prosopium cylindraceum
+ALC,Alepocephalus bairdii
+ALH,Alepocephalus
+SLX,Salmonoidei
+FPI,Esox lucius
+MAV,Maurolicus muelleri
+BRT,Borostomias antarcticus
+ARP,Arapaima gigas
+OOB,Osteoglossum bicirrhosum
+OHB,Scleropages formosus
+HTN,Heterotis niloticus
+NCC,Chitala chitala
+NCG,Chitala lopis
+ONN,Notopterus notopterus
+FKN,Notopterus
+ONP,Papyrocranus afer
+OEY,Mormyridae
+OGN,Gymnarchus niloticus
+CEW,Elops hawaiensis
+LAD,Elops saurus
+CEC,Elops lacerta
+TAR,Megalops atlanticus
+TAI,Megalops cyprinoides
+BOF,Albula vulpes
+BNF,Pterothrissus belloci
+ALX,Alepisaurus ferox
+MNL,Magnisudis atlantica
+NOE,Notolepis
+CVW,Chlorophthalmus agassizi
+GRE,Chlorophthalmidae
+BUC,Harpadon nehereus
+SDR,Synodus saurus
+LIG,Saurida tumbil
+LIB,Saurida undosquamis
+LIX,Synodontidae
+LAN,Lampanyctodes hectoris
+LAC,Lampanyctus achirus
+BHQ,Benthosema pterotum
+ELC,Electrona carlsbergi
+GYN,Gymnoscopelus nicholsi
+LXX,Myctophidae
+AXF,Astyanax fasciatus
+BZH,Brycon amazonicus
+BNC,Brycon cephalus
+BXN,Brycon hilarii
+BNV,Brycon guatemalensis
+BNO,Brycon orbignyanus
+BVD,Brycon dentex
+BCM,Brycon moorei
+BXH,Brycon
+MLD,Mylossoma duriventre
+SXU,Salminus brasiliensis
+PYE,Pygocentrus nattereri
+RRX,Serrasalmus
+CSM,Colossoma macropomum
+CSD,Piaractus brachypomus
+CSO,Piaractus mesopotamicus
+TPU,Triportheus angulatus
+CHA,Characidae
+TXY,P. mesopotamicus x C. macropomum
+TXZ,C. macropomum x P. brachypomus
+LPU,Leporellus vittatus
+OIA,Anostomoides laticeps
+LPB,Leporinus obtusidens
+LXZ,Leporinus
+SZF,Schizodon fasciatus
+CIV,Citharinus
+HOA,Hoplias aimara
+HWM,Hoplias microlepis
+HWU,Hoplias malabaricus
+HVW,Hoplias
+HPU,Hoplerythrinus unitaeniatus
+HED,Hepsetus odoe
+PLL,Prochilodus lineatus
+PLR,Prochilodus reticulatus
+QPN,Prochilodus nigricans
+QMR,Prochilodus mariae
+PRL,Prochilodus
+ICH,Ichthyoelephas humeralis
+PNL,Potamorhina laticeps
+PDB,Pseudocurimata boulengeri
+SKI,Semaprochilodus insignis
+CUU,Curimata cyprinoides
+AEB,Alestes baremoze
+XAE,Alestes
+BCE,Brycinus leuciscus
+BZC,Brycinus nurse
+HCF,Hydrocynus forskahlii
+HWV,Hydrolycus scomberoides
+XES,Xenocharax spilurus
+DSE,Distichodus
+BUF,Ictiobus
+CDO,Carpiodes carpio
+CTM,Catostomidae
+FBM,Abramis brama
+FBR,Abramis
+FCP,Cyprinus carpio
+FTE,Tinca tinca
+ALR,Alburnus alburnus
+PTB,Barbus barbus
+BUD,Barbus meridionalis
+BBU,Barbus altianalis
+BBK,Barbus callensis
+BBZ,Barbus cyclolepis
+HON,Chondrostoma nasus
+FCC,Carassius carassius
+CGO,Carassius auratus
+WDX,Carassius
+FRO,Rutilus rutilus
+RFR,Rutilus frisii
+RWC,Rutilus caspicus
+FRX,Rutilus
+SRE,Scardinius erythrophthalmus
+FID,Leuciscus idus
+LUC,Leuciscus cephaloides
+FIE,Leuciscus leuciscus
+LUH,Leuciscus cephalus
+LEW,Leuciscus
+LCB,Labeo calbasu
+LBM,Labeo dussumieri
+LRH,Labeo rohita
+LOC,Labeo victorianus
+RHI,Labeo
+MUC,Cirrhinus molitorella
+CMG,Cirrhinus mrigala
+RNM,Cirrhinus microlepis
+CTT,Catla catla
+FCG,Ctenopharyngodon idella
+YCA,Cyclocheilichthys apogon
+YCQ,Cyclocheilichthys armatus
+HML,Hampala macrolepidota
+SVC,Hypophthalmichthys molitrix
+BIC,Hypophthalmichthys nobilis
+LZF,Labiobarbus festivus
+FCN,Osteochilus hasseltii
+PRJ,Probarbus jullieni
+RSZ,Rasbora argyrotaenia
+TWY,Thynnichthys vaillanti
+TOB,Tor tambroides
+TZD,Tor douronensis
+ROG,Rohtee ogilbii
+ENA,Rastrineobola argentea
+AHT,Acanthobrama terraesanctae
+ZAP,Zacco platypus
+VIV,Vimba vimba
+FSC,Pelecus cultratus
+ASU,Aspius aspius
+NUC,Chalcalburnus chalcoides
+AWT,Chalcalburnus tarichi
+BBR,Barbodes balleroides
+FCH,Leptobarbus hoevenii
+BKC,Mylopharyngodon piceus
+OEC,Capoeta capoeta
+WUB,Megalobrama amblycephala
+PUI,Puntius binotatus
+FAB,Puntius
+ENL,Engraulicypris sardella
+YHX,Hypsibarbus
+MCO,Macrochirichthys macrochirus
+MZP,Mystacoleucus padangensis
+ARH,Neolissochilus hexagonolepis
+OBL,Osteobrama belangeri
+WPU,Puntioplites waandersi
+SZU,Schizothorax curvifrons
+QEZ,Schizothorax
+PUS,Systomus sarana
+ABK,Blicca bjoerkna
+PTG,Barbonymus gonionotus
+BFS,Barbonymus schwanenfeldii
+VBE,Varicorhinus beso
+FCY,Cyprinidae
+KUR,Misgurnus anguillicaudatus
+MWT,Misgurnus fossilis
+BMW,Chromobotia macracanthus
+TWS,Cathorops spixii
+AXP,Arius proops
+AWX,Arius
+BEM,Bagre marinus
+GAT,Galeichthys feliceps
+AUX,Netuma thalassina
+CAX,Ariidae
+DPZ,Doraops zuloagai
+PYS,Platydoras costatus
+DPG,Pterodoras granulosus
+GJZ,Ageneiosus inermis
+CAE,Plotosus
+SOM,Silurus glanis
+SRO,Silurus asotus
+CAG,Kryptopterus
+OKB,Ompok bimaculatus
+WAA,Wallago attu
+WAX,Wallago
+AUO,Auchenoglanis occidentalis
+AUB,Auchenoglanis biscutatus
+MYN,Hemibagrus nemurus
+JBZ,Lophiobagrus cyclurus
+LLZ,Leiocassis longirostris
+BMZ,Mystus nigriceps
+CSR,Chrysichthys nigrodigitatus
+BCR,Chrysichthys brachynema
+IQL,Chrysichthys platycephalus
+IQM,Chrysichthys sianenna
+IQN,Chrysichthys stappersii
+CST,Chrysichthys
+BGJ,Bagrus bajad
+CAN,Bagrus
+YCH,Pelteobagrus fulvidraco
+ITP,Ictalurus punctatus
+ITF,Ictalurus furcatus
+CAF,Ictalurus
+ITM,Ameiurus melas
+ITE,Ameiurus nebulosus
+IPO,Pylodictis olivaris
+ILP,Parailia pellucida
+CBT,Clarias batrachus
+CFS,Clarias fuscus
+CLZ,Clarias gariepinus
+CLN,Clarias anguillaris
+CTO,Clarias
+CGM,Clarias gariepinus
+HEB,Heterobranchus bidorsalis
+HEL,Heterobranchus longifilis
+MPC,Malapterurus electricus
+BPF,Brachyplatystoma filamentosum
+BPT,Brachyplatystoma vaillanti
+BXP,Brachyplatystoma rousseauxii
+HYM,Calophysus macropterus
+HBY,Hemisorubim platyrhynchos
+LSX,Lophiosilurus alexandri
+RMQ,Rhamdia quelen
+PMB,Pimelodus albicans
+MDM,Pimelodus maculatus
+MXW,Pimelodus
+SBM,Sorubim lima
+PEH,Phractocephalus hemioliopterus
+MDI,Pinirampus pirinampu
+UDC,Pseudoplatystoma corruscans
+UDF,Pseudoplatystoma fasciatum
+UDT,Pseudoplatystoma tigrinum
+UPY,Pseudoplatystoma
+ZUZ,Zungaro zungaro
+LPI,Luciopimelodus pati
+HPN,Hypophthalmus edentatus
+HBU,Hypophthalmus
+HTM,Hatcheria macraei
+HSR,Hoplosternum littorale
+LCC,Loricaria cataphracta
+QYP,Pterygoplichthys pardalis
+HSL,Hypostomus plecostomus
+PGP,Pangasius pangasius
+PQZ,Pangasius djambal
+PGZ,Pangasius
+PGS,Pangasianodon hypophthalmus
+HTF,Heteropneustes fossilis
+CSY,Synodontis
+FSI,Siluroidei
+ELE,Anguilla anguilla
+ELJ,Anguilla japonica
+ELA,Anguilla rostrata
+ELU,Anguilla australis
+AAR,Anguilla reinhardtii
+ELX,Anguilla
+AGK,Gymnothorax unicolor
+MMH,Muraena helena
+MUI,Muraenidae
+DPC,Muraenesox cinereus
+PCX,Muraenesox
+CXP,Cynoponticus coniceps
+COE,Conger conger
+COS,Conger orbignyanus
+COA,Conger oceanicus
+ELS,Conger myriaster
+COX,Congridae
+AOM,Echelus myrus
+OWX,Ophichthidae
+SDC,Diastobranchus capensis
+GAR,Belone belone
+BAF,Ablennes hians
+NFA,Strongylura marina
+BTS,Tylosurus crocodilus
+NED,Tylosurus
+BEN,Belonidae
+SAU,Scomberesox saurus
+SAP,Cololabis saira
+HAJ,Hyporhamphus sajori
+BAL,Hemiramphus brasiliensis
+BHA,Hemiramphus balao
+JKX,Hemiramphidae
+JFL,Cypselurus agoo
+FLY,Exocoetidae
+MOY,Muraenolepis microps
+MRL,Muraenolepis
+MHJ,Halargyreus johnsonii
+LMG,Laemonema longipes
+RIB,Mora moro
+NEC,Pseudophycis bachus
+TPG,Tripterophycis gilchristi
+ANT,Antimora rostrata
+SAO,Salilota australis
+MOR,Moridae
+UNC,Bregmaceros mcclellandi
+USK,Brosme brosme
+COD,Gadus morhua
+PCO,Gadus macrocephalus
+GRC,Gadus ogac
+FBU,Lota lota
+LIN,Molva molva
+BLI,Molva dypterygia
+SLI,Molva macrophthalma
+LNZ,Molva
+GFB,Phycis blennoides
+FOR,Phycis phycis
+GPE,Phycis chesteri
+FOX,Phycis
+HKU,Urophycis brasiliensis
+HKR,Urophycis chuss
+HKW,Urophycis tenuis
+HAD,Melanogrammus aeglefinus
+COW,Eleginus navaga
+SAF,Eleginus gracilis
+MGX,Microgadus proximus
+TOM,Microgadus tomcod
+POK,Pollachius virens
+POL,Pollachius pollachius
+ALK,Theragra chalcogramma
+POC,Boreogadus saida
+GDG,Gadiculus argenteus
+GDE,Gaidropsarus ensis
+ROL,Gaidropsarus
+NOP,Trisopterus esmarkii
+POD,Trisopterus minutus
+BIB,Trisopterus luscus
+WHB,Micromesistius poutassou
+POS,Micromesistius australis
+WHG,Merlangius merlangus
+ENC,Enchelyopus cimbrius
+HKE,Merluccius merluccius
+HKM,Merluccius senegalensis
+HKN,Merluccius australis
+HKS,Merluccius bilinearis
+PHA,Merluccius gayi
+HKP,Merluccius hubbsi
+NHA,Merluccius productus
+HKB,Merluccius polli
+HKO,Merluccius paradoxus
+HOF,Merluccius albidus
+MRG,Merluccius angustimanus
+HKK,Merluccius capensis
+HKX,Merluccius
+HKC,Merluccius capensis
+GRM,Macruronus magellanicus
+GRN,Macruronus novaezelandiae
+RHG,Macrourus berglax
+WGR,Macrourus whitsoni
+MCC,Macrourus carinatus
+MCH,Macrourus holotrachys
+QMC,Macrourus caml
+GRV,Macrourus
+RNG,Coryphaenoides rupestris
+MCS,Coryphaenoides subserrulatus
+CVY,Coryphaenoides
+CQO,Coelorinchus chilensis
+TSU,Trachyrincus scabrus
+MNI,Cynomacrurus piriei
+NZA,Nezumia aequalis
+LDE,Lepidorhynchus denticulatus
+RTX,Macrouridae
+GAD,Gadiformes
+GTA,Gasterosteus aculeatus
+KLA,Hypoptychus dybowskii
+FUC,Fistularia corneta
+FUT,Fistularia tabacaria
+FIO,Fistularia commersonii
+SNS,Macroramphosus scolopax
+NLD,Notopogon lilliei
+CUQ,Centriscops humerosus
+LAG,Lampris guttatus
+LAI,Lampris immaculatus
+TRQ,Trachipterus trachypterus
+TPA,Trachipterus arcticus
+TRP,Trachipterus
+REL,Regalecus glesne
+CUS,Genypterus blacodes
+CUC,Genypterus chilensis
+CUB,Genypterus maculatus
+KCP,Genypterus capensis
+CEX,Genypterus
+BRD,Brotula barbata
+OPH,Ophidiidae
+BBF,Barbourisia rufa
+PXV,Polymixia nobilis
+BXD,Beryx decadactylus
+BYS,Beryx splendens
+ALF,Beryx
+CXF,Centroberyx affinis
+HPR,Hoplostethus mediterraneus
+ORY,Hoplostethus atlanticus
+TPT,Paratrachichthys trailli
+TRC,Trachichthyidae
+HOO,Holocentrus ascensionis
+HVS,Sargocentron spiniferum
+HWH,Sargocentron rubrum
+HCZ,Holocentridae
+JOD,Zeus faber
+ZCP,Zeus capensis
+JOS,Zenopsis conchifer
+ZNE,Zenopsis nebulosus
+ZCA,Capromimus abbreviatus
+ZCN,Cyttus novaezealandiae
+ZCT,Cyttus traversi
+ZEX,Zeidae
+BOC,Capros aper
+BOR,Caproidae
+ONV,Neocyttus rhomboidalis
+SSO,Pseudocyttus maculatus
+BOE,Allocyttus niger
+ALL,Allocyttus verrucosus
+ORD,Oreosomatidae
+ODR,Odontesthes regia
+BCB,Odontesthes bonariensis
+OWM,Odontesthes smitti
+ATB,Atherina boyeri
+AHH,Atherina hepsetus
+KRW,Chirostoma
+SSA,Menidia menidia
+SIL,Atherinidae
+MUF,Mugil cephalus
+MUB,Mugil liza
+MGU,Mugil curema
+MGI,Mugil incilis
+MYZ,Mugil soiuy
+MLR,Chelon labrosus
+AJW,Agonostomus monticola
+MUA,Joturus pichardi
+MGC,Liza ramada
+MGA,Liza aurata
+LZS,Liza saliens
+LZV,Liza vaigiensis
+LZK,Liza klunzingeri
+LZH,Liza abu
+SOY,Liza haematocheilus
+VMH,Valamugil seheli
+MUL,Mugilidae
+FLT,Monopterus albus
+SXR,Synbranchus marmoratus
+MWY,Mastacembelus erythrotaenia
+JCB,Mastacembelus cunningtoni
+CJX,Caesionidae
+EPN,Centropomus ensiferus
+SNO,Centropomus undecimalis
+ROB,Centropomus
+GIP,Lates calcarifer
+LTG,Lates angustifrons
+LSM,Lates mariae
+LSL,Lates microlepis
+NIP,Lates niloticus
+IRQ,Lates stappersii
+PEX,Lates
+PWG,Psammoperca waigiensis
+EHG,Aethaloperca rogaa
+RNL,Caprodon longimanus
+MAB,Mycteroperca bonaci
+MKM,Mycteroperca microlepis
+MKH,Mycteroperca phenax
+MKU,Mycteroperca rubra
+MKV,Mycteroperca venenosa
+GBS,Mycteroperca xenarcha
+MKN,Mycteroperca interstitialis
+GPB,Mycteroperca
+GPD,Epinephelus marginatus
+GPW,Epinephelus aeneus
+EPA,Epinephelus akaara
+EEN,Epinephelus lanceolatus
+EER,Epinephelus merra
+EIF,Epinephelus septemfasciatus
+EPT,Epinephelus tauvina
+GPN,Epinephelus striatus
+EFD,Epinephelus adscensionis
+GPS,Epinephelus analogus
+EED,Epinephelus drummondhayi
+EEL,Epinephelus flavolimbatus
+EEU,Epinephelus guttatus
+GPR,Epinephelus morio
+EEY,Epinephelus mystacinus
+EFV,Epinephelus niveatus
+EFJ,Epinephelus caninus
+EEG,Epinephelus goreensis
+EEP,Epinephelus morrhua
+ELG,Epinephelus nigritus
+EPR,Epinephelus areolatus
+MAR,Epinephelus malabaricus
+EFK,Epinephelus bleekeri
+EFH,Epinephelus chlorostigma
+ENI,Epinephelus coioides
+EEK,Epinephelus polyphekadion
+EWC,Epinephelus caeruleopunctatus
+EWF,Epinephelus fuscoguttatus
+EWU,Epinephelus multinotatus
+EWL,Epinephelus tukula
+EWY,Epinephelus polylepis
+EWS,Epinephelus summana
+GPX,Epinephelus
+CBR,Serranus cabrilla
+SRK,Serranus scriba
+WSA,Serranus atricauda
+BAS,Serranus
+LDP,Lepidoperca pulchella
+BSB,Centropristis striata
+FHC,Centropristis philadelphica
+CFL,Cephalopholis cruentata
+CFJ,Cephalopholis fulva
+CFF,Cephalopholis argus
+CFH,Cephalopholis hemistiktos
+CFI,Cephalopholis miniata
+CVK,Cephalopholis boenak
+MPV,Cromileptes altivelis
+PLM,Plectropomus maculatus
+EME,Plectropomus areolatus
+EMO,Plectropomus leopardus
+EMU,Plectropomus pessuliferus
+BSZ,Acanthistius brasilianus
+BAP,Paralabrax humeralis
+XBX,Paralabrax
+VRL,Variola louti
+BSX,Serranidae
+QOF,Scortum barcoo
+TEU,Terapon puta
+TEH,Terapon theraps
+THO,Terapon
+PQD,Pelates quadrilineatus
+BYB,Bidyanus bidyanus
+WRF,Polyprion americanus
+WHA,Polyprion oxygeneios
+TEJ,Stereolepis gigas
+STB,Morone saxatilis
+PEW,Morone americana
+ROY,Morone chrysops
+SBH,Morone chrysops
+SPU,Dicentrarchus punctatus
+BSS,Dicentrarchus labrax
+BSE,Dicentrarchus
+MCP,Maccullochella peelii
+SIN,Siniperca chuatsi
+MCA,Macquaria ambigua
+LMM,Lepomis macrochirus
+MPS,Micropterus salmoides
+AKR,Ambloplites rupestris
+PXR,Pomoxis annularis
+PQR,Priacanthus arenatus
+BIR,Priacanthus macracanthus
+BIG,Priacanthus
+APO,Apogonidae
+OEB,Doederleinia berycoides
+SYN,Synagrops japonicus
+FPE,Perca fluviatilis
+FPY,Perca flavescens
+PND,Percarina demidoffi
+ACC,Gymnocephalus cernuus
+STV,Sander vitreus
+SAV,Sander volgensis
+FPP,Sander lucioperca
+SZC,Sander canadensis
+ILS,Sillago sihama
+WHS,Sillaginidae
+ULM,Caulolatilus microps
+ULP,Caulolatilus princeps
+CKZ,Caulolatilus chrysops
+TIL,Lopholatilus chamaeleonticeps
+TIS,Branchiostegidae
+MWP,Malacanthus plumieri
+TRF,Lactarius lactarius
+BLU,Pomatomus saltatrix
+CBA,Rachycentron canadum
+LSJ,Alepes djedaba
+TUM,Atule mate
+HOM,Trachurus trachurus
+JAA,Trachurus picturatus
+JJM,Trachurus japonicus
+CJM,Trachurus murphyi
+PJM,Trachurus symmetricus
+HMM,Trachurus mediterraneus
+RSC,Trachurus lathami
+HMC,Trachurus capensis
+HMZ,Trachurus trecae
+HMG,Trachurus declivis
+JAX,Trachurus
+TRZ,Pseudocaranx dentex
+WEC,Decapterus punctatus
+DCC,Decapterus macrosoma
+RSA,Decapterus maruadsi
+RUS,Decapterus russelli
+SDX,Decapterus
+NXC,Caranx caballus
+NXI,Caranx ignobilis
+NXM,Caranx melampygus
+NXS,Caranx senegallus
+CXS,Caranx sexfasciatus
+RUB,Caranx crysos
+CVJ,Caranx hippos
+CXR,Caranx ruber
+HMY,Caranx rhonchus
+NBR,Caranx bartholomaei
+TRE,Caranx
+MOA,Selene setapinnis
+LUK,Selene dorsalis
+LNP,Selene peruviana
+LNM,Selene vomer
+POO,Trachinotus blochii
+POM,Trachinotus carolinus
+POP,Trachinotus ovatus
+TNF,Trachinotus falcatus
+TUK,Trachinotus mookalee
+POX,Trachinotus
+AMB,Seriola dumerili
+AMJ,Seriola quinqueradiata
+YTC,Seriola lalandi
+RLF,Seriola fasciata
+YTL,Seriola rivoliana
+RLZ,Seriola zonata
+AMX,Seriola
+OLP,Oligoplites palometa
+OLG,Oligoplites refulgens
+NAU,Naucrates ductor
+LEE,Lichia amia
+ALA,Alectis alexandrinus
+LIJ,Alectis ciliaris
+POB,Parastromateus niger
+NGJ,Carangoides bajad
+NGU,Carangoides fulvoguttatus
+NGS,Carangoides malabaricus
+RRU,Elagatis bipinnulata
+GLT,Gnathanodon speciosus
+HAS,Megalaspis cordyla
+OBM,Scomberoides commersonnianus
+OBY,Scomberoides lysan
+OBJ,Scomberoides tol
+QUE,Scomberoides
+BUA,Chloroscombrus chrysurus
+HSO,Chloroscombrus orqueta
+PAO,Parona signata
+BIS,Selar crumenophthalmus
+TRY,Selaroides leptolepis
+RNJ,Seriolina nigrofasciata
+VAD,Campogramma glaycos
+CGX,Carangidae
+MOO,Mene maculata
+POA,Brama brama
+BRU,Brama australis
+TST,Taractichthys steindachneri
+BPB,Pterycombus brama
+BRZ,Bramidae
+DOL,Coryphaena hippurus
+RUF,Arripis georgianus
+ASA,Arripis trutta
+EMM,Emmelichthys nitidus
+RYG,Plagiogeneion rubiginosum
+EYO,Erythrocles monodi
+EMT,Emmelichthyidae
+RES,Lutjanus argentimaculatus
+LJT,Lutjanus erythropterus
+LJH,Lutjanus johnii
+MAL,Lutjanus malabaricus
+LUB,Lutjanus sebae
+LUJ,Lutjanus vitta
+LJN,Lutjanus analis
+HUS,Lutjanus argentiventris
+SNC,Lutjanus purpureus
+LJU,Lutjanus buccanella
+SNR,Lutjanus campechanus
+LJY,Lutjanus cyanopterus
+LJI,Lutjanus griseus
+LJS,Lutjanus guttatus
+SNL,Lutjanus synagris
+LTJ,Lutjanus vivanus
+SNU,Lutjanus russelli
+LJO,Lutjanus goreensis
+LJB,Lutjanus bohar
+LJG,Lutjanus gibbus
+LVN,Lutjanus fulgens
+LVK,Lutjanus kasmira
+LWQ,Lutjanus quinquelineatus
+LVG,Lutjanus goldiei
+LWP,Lutjanus peru
+SNA,Lutjanus
+SNY,Ocyurus chrysurus
+ARQ,Aphareus rutilans
+AVR,Aprion virescens
+ASX,Apsilus dentatus
+AFK,Apsilus fuscus
+EEO,Etelis oculatus
+PQI,Pristipomoides aquilonaris
+UPZ,Pristipomoides macrophthalmus
+LWX,Pristipomoides
+RPU,Rhomboplites aurorubens
+HLG,Hoplopagrus guentherii
+SNX,Lutjanidae
+NNJ,Nemipterus japonicus
+THG,Nemipterus virgatus
+NNZ,Nemipterus randalli
+THB,Nemipterus
+NWS,Scolopsis taeniata
+MOB,Scolopsis
+THD,Nemipteridae
+LOB,Lobotes surinamensis
+LOZ,Lobotes pacificus
+POY,Leiognathus
+PON,Leiognathidae
+DGP,Diagramma pictum
+HNS,Anisotremus scapularis
+HLU,Haemulon album
+HLI,Haemulon plumierii
+HLL,Haemulon aurolineatum
+HWX,Haemulon
+PIG,Orthopristis chrysoptera
+OTR,Orthopristis ruber
+GRP,Isacia conceptionis
+GRA,Parapristipoma octolineatum
+PKP,Plectorhinchus pictus
+PKF,Plectorhinchus schotaf
+GBL,Plectorhinchus macrolepis
+GBR,Plectorhinchus mediterraneus
+GQT,Plectorhinchus gaterinus
+GQD,Plectorhinchus sordidus
+PBX,Plectorhinchus
+PKS,Pomadasys stridens
+GRL,Pomadasys argenteus
+BGR,Pomadasys incisus
+BUR,Pomadasys jubelini
+PKE,Pomadasys perotaei
+KAH,Pomadasys kaakan
+GRB,Brachydeuterus auritus
+BRG,Conodon nobilis
+GRX,Haemulidae
+WEM,Totoaba macdonaldi
+CBM,Sciaena umbra
+DRU,Sciaena
+AGR,Aplodinotus grunniens
+YNA,Cynoscion acoupa
+WEP,Cynoscion analis
+YNR,Cynoscion arenarius
+YNJ,Cynoscion jamaicensis
+YNE,Cynoscion leiarchus
+SWF,Cynoscion nebulosus
+STG,Cynoscion regalis
+WKS,Cynoscion striatus
+YNV,Cynoscion virescens
+YGC,Cynoscion guatucupa
+WKX,Cynoscion
+MIH,Miichthys miiuy
+CKM,Micropogonias furnieri
+CKA,Micropogonias undulatus
+CRX,Micropogonias
+KGB,Menticirrhus americanus
+KGF,Menticirrhus saxatilis
+KGG,Menticirrhus littoralis
+KIX,Menticirrhus
+COB,Umbrina cirrosa
+CKY,Umbrina canosai
+UCA,Umbrina canariensis
+UBS,Umbrina
+WKK,Macrodon ancylodon
+MGR,Argyrosomus regius
+RYJ,Argyrosomus japonicus
+KOB,Argyrosomus hololepidotus
+AWE,Atractoscion aequidens
+WEW,Atractoscion nobilis
+KIC,Genyonemus lineatus
+LRJ,Larimus breviceps
+DRS,Pteroscion peli
+LKR,Otolithes ruber
+PDR,Paralonchurus peruanus
+LGQ,Plagioscion squamosissimus
+BDM,Pogonias cromis
+HOC,Nibea mitsukurii
+LYC,Larimichthys croceus
+CRY,Larimichthys polyactis
+ISA,Isopisthus parvipinnis
+SPT,Leiostomus xanthurus
+RDM,Sciaenops ocellatus
+CKL,Pseudotolithus senegallus
+PSS,Pseudotolithus senegalensis
+PSE,Pseudotolithus elongatus
+CKW,Pseudotolithus
+CRL,Atrobucca nibe
+CRV,Pennahia argentata
+NHK,Pennahia anea
+IAG,Cilus gilberti
+CDX,Sciaenidae
+LBR,Gymnocranius
+LHN,Lethrinus nebulosus
+LTN,Lethrinus atlanticus
+LTK,Lethrinus harak
+LTQ,Lethrinus mahsena
+LTS,Lethrinus lentjan
+LEN,Lethrinus microdon
+LHI,Lethrinus miniatus
+LWO,Lethrinus obsoletus
+LXN,Lethrinus xanthochilus
+LBW,Lethrinus borbonicus
+MXG,Monotaxis grandoculis
+EMP,Lethrinidae
+SBR,Pagellus bogaraveo
+PAC,Pagellus erythrinus
+SBA,Pagellus acarne
+PAR,Pagellus bellottii
+PAX,Pagellus
+DIG,Diplodus argenteus
+ANN,Diplodus annularis
+SWA,Diplodus sargus
+CTB,Diplodus vulgaris
+SHR,Diplodus puntazzo
+DIH,Diplodus holbrooki
+SRG,Diplodus
+CFN,Calamus arctifrons
+CBD,Calamus bajonado
+CKQ,Calamus brachysomus
+PRG,Calamus
+DEP,Dentex gibbosus
+DEL,Dentex macrophthalmus
+DEC,Dentex dentex
+DEA,Dentex angolensis
+DNC,Dentex congoensis
+DTT,Dentex tumifrons
+DEX,Dentex
+BRB,Spondyliosoma cantharus
+SBS,Oblada melanura
+SPH,Archosargus probatocephalus
+AVB,Archosargus rhomboidalis
+KBR,Argyrops spinifer
+SLF,Argyrozona argyrozona
+SLD,Cheimerius nufar
+CYM,Cymatoceps nasutus
+BSC,Pagrus caeruleostictus
+RPG,Pagrus pagrus
+REA,Pagrus auriga
+GSU,Pagrus auratus
+REV,Pagrus major
+SBP,Pagrus
+RER,Petrus rupestris
+PGA,Pterogymnus laniarius
+WSN,Rhabdosargus globiceps
+RSS,Rhabdosargus sarba
+RXS,Rhabdosargus haffara
+UZX,Rhabdosargus
+SBG,Sparus aurata
+BOG,Boops boops
+RSX,Chrysoblephus
+CWC,Crenidens crenidens
+SNW,Lithognathus lithognathus
+SSB,Lithognathus mormyrus
+STW,Lithognathus
+SLM,Sarpa salpa
+ENJ,Evynnis japonica
+SZH,Sparidentex hasta
+MLB,Acanthopagrus berda
+MLM,Acanthopagrus schlegeli
+YWF,Acanthopagrus latus
+AAB,Acanthopagrus bifasciatus
+SCP,Stenotomus chrysops
+LGO,Lagodon rhomboides
+SBX,Sparidae
+BPI,Spicara maena
+SPC,Spicara smaris
+PIC,Spicara
+EHI,Centracanthus cirrus
+MUR,Mullus surmuletus
+MUT,Mullus barbatus
+MWU,Mullus argentinae
+MUX,Mullus
+MUV,Mulloidichthys flavolineatus
+GOX,Upeneus
+GOA,Pseudupeneus prayensis
+MUM,Mullidae
+EHN,Echeneis naucrates
+ECN,Echeneidae
+TXM,Toxotes microlepis
+GEJ,Gerres oyena
+GEO,Gerres oblongus
+GEZ,Gerres nigri
+MOJ,Gerres
+DUT,Diapterus auratus
+MFF,Eucinostomus melanopterus
+GDJ,Gerreidae
+GIY,Girella tricuspidata
+OIV,Scorpis violacea
+KYX,Kyphosidae
+BAJ,Lateolabrax japonicus
+SPS,Drepane punctata
+SIC,Drepane africana
+RIS,Pristolepis fasciata
+SWH,Paristiopterus labiosus
+EMV,Pentaceros decacanthus
+EDR,Pseudopentaceros richardsoni
+EDJ,Pseudopentaceros wheeleri
+OLF,Oplegnathus fasciatus
+BEJ,Boulengerochromis microlepis
+AQK,Caquetaia kraussii
+OVZ,Copadichromis virginalis
+TLM,Oreochromis mossambicus
+TLN,Oreochromis niloticus
+OEA,Oreochromis aureus
+TLL,Oreochromis spilurus
+ORM,Oreochromis macrochir
+STA,Oreochromis andersonii
+OIH,Oreochromis shiranus
+OIT,Oreochromis tanganicae
+TLP,Oreochromis
+OXW,Oreochromis aureus
+SAR,Sarotherodon galilaeus
+SAH,Sarotherodon melanotheron
+CHL,Cichlasoma motaguense
+CHK,Cichlasoma maculicauda
+CHX,Cichlasoma
+CLO,Cichla ocellaris
+IGX,Cichla
+TLZ,Tilapia zillii
+TLR,Tilapia rendalli
+HBS,Hemibates stenosoma
+LNR,Limnotilapia dardennii
+HJF,Hemichromis fasciatus
+TOC,Astronotus ocellatus
+AST,Astronotus
+IBZ,Bathybates minor
+CIM,Haplochromis
+AER,Aequidens rivulatus
+YBB,Serranochromis robustus
+CIX,Cichlidae
+CBC,Cepola macrophthalma
+USB,Labrus bergylta
+WRM,Labrus merula
+USP,Clepticus parrae
+ENX,Centrolabrus exoletus
+COU,Coris julis
+TBR,Ctenolabrus rupestris
+XYN,Xyrichtys novacula
+HVM,Cheilinus undulatus
+LCX,Lachnolaimus maximus
+TAU,Tautoga onitis
+CUN,Tautogolabrus adspersus
+YFH,Semicossyphus pulcher
+YFM,Symphodus melops
+WRA,Labridae
+PRR,Sparisoma cretense
+USW,Scarus persicus
+USY,Scarus ghobban
+BMK,Bolbometopon muricatum
+PWT,Scaridae
+OAZ,Pomacanthus maculosus
+ANW,Pomacanthidae
+FPJ,Aplodactylus punctatus
+CTA,Cheilodactylus bergi
+HAW,Cheilodactylus variegatus
+TAK,Nemadactylus macropterus
+MOW,Nemadactylus
+TRU,Latridae
+OLX,Polydactylus sexfilis
+TGA,Polydactylus quadrifilis
+FOT,Eleutheronema tetradactylum
+GAL,Galeoides decadactylus
+PET,Pentanemus quinquarius
+OYD,Leptomelanosoma indicum
+THF,Polynemidae
+PGR,Pogonophryne permitini
+BVG,Cottoperca gobio
+BLP,Eleginops maclovinus
+TOA,Dissostichus mawsoni
+TOP,Dissostichus eleginoides
+NOR,Notothenia rossii
+NOG,Notothenia gibberifrons
+NON,Notothenia neglecta
+NOS,Notothenia squamifrons
+NOC,Notothenia coriiceps
+NOK,Notothenia kempi
+NOA,Notothenia acuta
+NOL,Nototheniops larseni
+NOD,Nototheniops nudifrons
+NOZ,Nototheniops mizops
+NNY,Nototheniops nybelini
+NOT,Patagonotothen brevicauda
+PAT,Patagonotothen ramsayi
+GHP,Patagonotothen guntheri
+TRL,Trematomus eulepidotus
+TRT,Trematomus
+TRH,Pagothenia hansoni
+ANS,Pleuragramma antarcticum
+NOX,Nototheniidae
+PGE,Parachaenichthys georgianus
+CHW,Chionobathyscus dewitti
+JIC,Neopagetopsis ionah
+SSI,Chaenocephalus aceratus
+ANI,Champsocephalus gunnari
+CES,Champsocephalus esox
+SGI,Pseudochaenichthys georgianus
+KIF,Chionodraco rastrospinosus
+TIC,Chionodraco hamatus
+MIC,Chionodraco myersi
+LIC,Channichthys rhinoceratus
+WIC,Chaenodraco wilsoni
+ICX,Channichthyidae
+AIB,Ambassidae
+EPI,Epigonus telescopus
+CDL,Epigonus
+PRC,Percoidei
+CAA,Anarhichas lupus
+CAB,Anarhichas denticulatus
+CAS,Anarhichas minor
+CAT,Anarhichas
+ELP,Zoarces viviparus
+OPT,Macrozoarces americanus
+ELZ,Lycodes
+PAS,Ammodytes personatus
+ABZ,Ammodytes tobianus
+SAN,Ammodytes
+FLA,Percophis brasiliensis
+ROJ,Prolatilus jugularis
+UPR,Pseudopercis semifasciata
+NEB,Parapercis colias
+PJR,Pinguipes brasilianus
+JPC,Pinguipes chilensis
+WEG,Trachinus draco
+TOZ,Trachinus vipera
+WEX,Trachinus
+TRA,Trachinidae
+UUC,Uranoscopus scaber
+STZ,Kathetostoma giganteum
+JAS,Arctoscopus japonicus
+DOM,Dormitator latifrons
+DMM,Dormitator maculatus
+GBD,Gobiomorus dormitor
+GBM,Oxyeleotris marmorata
+FGB,Eleotridae
+GBN,Gobius niger
+FIM,Aphia minuta
+NBU,Neogobius melanostomus
+BFP,Boleophthalmus pectinirostris
+MBF,Mesogobius batrachocephalus
+IYL,Sicyopterus lagocephalus
+FGX,Gobiidae
+GPA,Gobiidae
+AVQ,Acanthurus sohal
+NAS,Naso unicornis
+SUR,Acanthuridae
+LXR,Platax orbicularis
+BAT,Platax
+HRF,Chaetodipterus faber
+HTZ,Chaetodipterus zonatus
+SPA,Ephippidae
+SCT,Scatophagus
+IGV,Siganus javus
+SRI,Siganus rivulatus
+SCN,Siganus canaliculatus
+IGU,Siganus luridus
+SPI,Siganus
+BON,Sarda sarda
+BIP,Sarda orientalis
+BEP,Sarda chiliensis
+BAU,Sarda australis
+MAS,Scomber japonicus
+MAC,Scomber scombrus
+MAA,Scomber australasicus
+VMA,Scomber colias
+MAZ,Scomber
+BOP,Orcynopsis unicolor
+WAH,Acanthocybium solandri
+DOT,Gymnosarda unicolor
+RAB,Rastrelliger brachysoma
+RAG,Rastrelliger kanagurta
+RAX,Rastrelliger
+COM,Scomberomorus commerson
+GUT,Scomberomorus guttatus
+STS,Scomberomorus lineolatus
+KGM,Scomberomorus cavalla
+SSM,Scomberomorus maculatus
+CER,Scomberomorus regalis
+SIE,Scomberomorus sierra
+MAW,Scomberomorus tritor
+NPH,Scomberomorus niphonius
+BBM,Scomberomorus semifasciatus
+BRS,Scomberomorus brasiliensis
+KGX,Scomberomorus
+BUK,Gasterochisma melampus
+FRI,Auxis thazard
+BLT,Auxis rochei
+FRZ,Auxis thazard
+LTA,Euthynnus alletteratus
+BKJ,Euthynnus lineatus
+KAW,Euthynnus affinis
+SKJ,Katsuwonus pelamis
+BFT,Thunnus thynnus
+PBF,Thunnus orientalis
+LOT,Thunnus tonggol
+BLF,Thunnus atlanticus
+ALB,Thunnus alalunga
+SBF,Thunnus maccoyii
+YFT,Thunnus albacares
+BET,Thunnus obesus
+SLT,Allothunnus fallai
+MAX,Scombridae
+SFA,Istiophorus platypterus
+SAI,Istiophorus albicans
+BUM,Makaira nigricans
+BLM,Makaira indica
+MSP,Tetrapturus belone
+MLS,Tetrapturus audax
+WHM,Tetrapturus albidus
+SSP,Tetrapturus angustirostris
+SPF,Tetrapturus pfluegeri
+RSP,Tetrapturus georgii
+BIL,Istiophoridae
+SWO,Xiphias gladius
+SNK,Thyrsites atun
+WSM,Thyrsitops lepidopoides
+LEC,Lepidocybium flavobrunneum
+OIL,Ruvettus pretiosus
+TEZ,Paradiplospinus antarcticus
+GEM,Rexea solandri
+PRP,Promethichthys prometheus
+GEP,Gempylidae
+BEH,Benthodesmus
+LHT,Trichiurus lepturus
+SFS,Lepidopus caudatus
+BSF,Aphanopus carbo
+APH,Aphanopus intermedius
+CUT,Trichiuridae
+TUX,Scombroidei
+BLB,Stromateus fiatola
+TMB,Stromateus brasiliensis
+SIP,Pampus argenteus
+XPO,Pampus
+ERP,Peprilus paru
+BUT,Peprilus triacanthus
+PPO,Peprilus simillimus
+BTG,Peprilus
+BUX,Stromateidae
+DRI,Ariomma indica
+FPC,Anabas testudineus
+UBA,Cubiceps caeruleus
+UBP,Cubiceps capensis
+CEO,Centrolophus niger
+HDV,Schedophilus ovalis
+SEY,Schedophilus velaini
+HDW,Schedophilus pemarco
+SEO,Seriolella porosa
+SEM,Seriolella brama
+SEP,Seriolella punctata
+SEU,Seriolella caerulea
+BSP,Seriolella
+BWA,Hyperoglyphe antarctica
+HGY,Hyperoglyphe bythites
+HYW,Hyperoglyphe perciformis
+BUP,Psenopsis anomala
+CEN,Centrolophidae
+FGG,Osphronemus goramy
+FGS,Trichogaster pectoralis
+TGH,Trichogaster trichopterus
+GOM,Trichogaster
+FGO,Helostoma temminkii
+YRS,Sphyraena sphyraena
+BAC,Sphyraena jello
+YRB,Sphyraena obtusata
+YRG,Sphyraena argentea
+GBA,Sphyraena barracuda
+YRE,Sphyraena ensis
+BAN,Sphyraena putnamae
+BAR,Sphyraena
+BLE,Blenniidae
+CNA,Channa argus
+CNP,Channa punctata
+FSS,Channa striata
+FIS,Channa micropeltes
+KNA,Channa marulius
+FSN,Channa
+QFW,Parachanna obscura
+QRX,Parachanna
+REG,Sebastes marinus
+SFV,Sebastes viviparus
+WRO,Sebastes entomelas
+YRO,Sebastes flavidus
+SFP,Sebastes serriceps
+SEQ,Sebastes rosaceus
+SED,Sebastes serranoides
+SFY,Sebastes mystinus
+OPP,Sebastes alutus
+SFW,Sebastes miniatus
+REB,Sebastes mentella
+REC,Sebastes capensis
+SPG,Sebastes pinniger
+SGO,Sebastes goodei
+SFO,Sebastes constellatus
+SFJ,Sebastes caurinus
+SFD,Sebastes diploproa
+SFE,Sebastes elongatus
+SFK,Sebastes jordani
+SFL,Sebastes schlegeli
+RMG,Sebastes melanops
+RPJ,Sebastes proriger
+RRV,Sebastes ruberrimus
+RVN,Sebastes nebulosus
+RVB,Sebastes babcocki
+RVR,Sebastes aurora
+RVM,Sebastes melanostomus
+RFC,Sebastes crameri
+REQ,Sebastes oculatus
+QYR,Sebastes chlorostictus
+QYS,Sebastes carnatus
+QYT,Sebastes levis
+QYV,Sebastes rufus
+RED,Sebastes
+BBS,Scorpaena porcus
+RSE,Scorpaena scrofa
+SNQ,Scorpaena notata
+EZS,Scorpaena elongata
+BRF,Helicolenus dactylopterus
+HFR,Helicolenus percoides
+POI,Pontinus kuhlii
+PZO,Pterois volitans
+SJU,Sebastolobus alascanus
+SJZ,Sebastolobus altivelis
+TZY,Trachyscorpia echinata
+SCO,Scorpaenidae
+GUN,Trigla lyra
+KUG,Chelidonichthys kumu
+GUU,Chelidonichthys lucerna
+CTZ,Chelidonichthys lastoviza
+GUC,Chelidonichthys capensis
+GUR,Aspitrigla cuculus
+LDY,Lepidotrigla brachyoptera
+SRA,Prionotus
+BEG,Pterygotrigla polyommata
+JGU,Pterygotrigla picta
+GUG,Eutrigla gurnardus
+GUX,Triglidae
+CLI,Ophiodon elongatus
+ATK,Pleurogrammus azonus
+HUM,Pleurogrammus monopterygius
+HXQ,Hexagrammos decagrammus
+ESZ,Erilepis zonifer
+SAB,Anoplopoma fimbria
+GMK,Grammoplites suppositus
+FLI,Platycephalus indicus
+FLH,Platycephalidae
+ZSP,Zanclorhynchus spinifer
+MXV,Myoxocephalus scorpius
+SCU,Myoxocephalus
+SMQ,Scorpaenichthys marmoratus
+SWU,Cottidae
+NRC,Normanichthys crockeri
+AFT,Agonus cataphractus
+LUM,Cyclopterus lumpus
+TZK,Liparis tanakae
+DYL,Dactylopterus volitans
+MSF,Arnoglossus laterna
+OUN,Bothus pantherinus
+LEF,Bothidae
+HAL,Hippoglossus hippoglossus
+HAP,Hippoglossus stenolepis
+PLE,Pleuronectes platessa
+ALP,Pleuronectes
+RFE,Pleuronectes vetulus
+GHL,Reinhardtius hippoglossoides
+ARF,Atheresthes stomias
+KAF,Atheresthes evermanni
+EOJ,Eopsetta jordani
+WIT,Glyptocephalus cynoglossus
+PLA,Hippoglossoides platessoides
+FTS,Hippoglossoides elassodon
+EOL,Pelotretis flavilatus
+YES,Limanda aspera
+YEL,Limanda ferruginea
+DAB,Limanda limanda
+ROS,Lepidopsetta bilineata
+MIP,Microstomus pacificus
+LEM,Microstomus kitt
+FLE,Platichthys flesus
+PWQ,Platichthys stellatus
+YSE,Psettichthys melanostictus
+YFL,Pseudopleuronectes
+FLW,Pseudopleuronectes americanus
+FSA,Rhombosolea
+NYD,Pleuronichthys decurrens
+NYV,Pleuronichthys verticalis
+PLZ,Pleuronectidae
+SOL,Solea solea
+SOS,Solea lascaris
+OAL,Solea senegalensis
+SOO,Solea
+CET,Dicologlossa cuneata
+SOW,Austroglossus microlepis
+SOE,Austroglossus pectoralis
+SOA,Austroglossus
+THS,Microchirus
+SOX,Soleidae
+YFU,Symphurus ligulatus
+TOX,Cynoglossidae
+MEG,Lepidorhombus whiffiagonis
+LDB,Lepidorhombus boscii
+LEZ,Lepidorhombus
+BLL,Scophthalmus rhombus
+FLD,Scophthalmus aquosus
+TUR,Psetta maxima
+SCF,Scophthalmidae
+CIL,Citharus linguatula
+CIT,Citharidae
+HAI,Psettodes erumei
+SOT,Psettodes belcheri
+IYO,Citharichthys sordidus
+YLP,Cyclopsetta panamensis
+BAH,Paralichthys olivaceus
+YSF,Paralichthys californicus
+FLS,Paralichthys dentatus
+YSO,Paralichthys oblongus
+BAX,Paralichthys
+MMM,Mancopsetta maculata
+FLX,Pleuronectiformes
+BXF,Ostraciidae
+LFL,Lagocephalus laevigatus
+LFZ,Lagocephalus sceleratus
+PUF,Sphoeroides maculatus
+PUA,Sphoeroides
+TXK,Takifugu rubripes
+TZO,Takifugu obscurus
+TXV,Takifugu
+PUX,Tetraodontidae
+ALJ,Tragulichthys jaculiferus
+MOX,Mola mola
+FLF,Cantherhines
+FIL,Stephanolepis cirrhifer
+KOY,Stephanolepis diaspros
+PKB,Parika scaber
+FFX,Monacanthidae
+TRG,Balistes carolinensis
+BLV,Balistes vetula
+NHR,Canthidermis macrolepis
+TRI,Balistidae
+BAY,Amphichthys cryptocentrus
+BHD,Halobatrachus didactylus
+TFD,Batrachoididae
+MON,Lophius piscatorius
+ANK,Lophius budegassa
+ANG,Lophius americanus
+MVA,Lophius vaillanti
+MVO,Lophius vomerinus
+MVJ,Lophius gastrophysus
+MNZ,Lophius
+ANF,Lophiidae
+FRF,Osteichthyes
+GRO,Osteichthyes
+PEL,Osteichthyes
+FIN,Osteichthyes
+MZZ,Osteichthyes
+DPX,Perciformes
+PPX,Perciformes
+SKH,Selachimorpha
+SKX,Elasmobranchii
+DNF,Daphniidae
+AMS,Artemia salina
+JCM,Calanus finmarchicus
+GOO,Lepas
+MBZ,Austromegabalanus psittacus
+PCB,Pollicipes pollicipes
+MTS,Squilla mantis
+OQM,Erugosquilla massavensis
+SQY,Squillidae
+SVX,Stomatopoda
+KRI,Euphausia superba
+NKR,Meganyctiphanes norvegica
+ABS,Penaeus aztecus
+PBA,Penaeus merguiensis
+YPS,Penaeus californiensis
+APS,Penaeus duorarum
+PNT,Penaeus schmitti
+KUP,Penaeus japonicus
+PNS,Penaeus stylirostris
+PNV,Penaeus vannamei
+GIT,Penaeus monodon
+PNP,Penaeus plebejus
+FLP,Penaeus chinensis
+TGS,Penaeus kerathurus
+PNB,Penaeus brasiliensis
+TIP,Penaeus semisulcatus
+PRB,Penaeus esculentus
+PST,Penaeus setiferus
+CSP,Penaeus brevirostris
+PNI,Penaeus indicus
+WKP,Penaeus latisulcatus
+WWP,Penaeus occidentalis
+REP,Penaeus penicillatus
+SOP,Penaeus notialis
+PPS,Penaeus paulensis
+PNU,Penaeus subtilis
+PEN,Penaeus
+RRJ,Protrachypene precipua
+MPN,Metapenaeus monoceros
+MPM,Metapenaeus macleayi
+ENS,Metapenaeus endeavouri
+SHI,Metapenaeus joyneri
+MPE,Metapenaeus ensis
+MET,Metapenaeus
+DPS,Parapenaeus longirostris
+GUS,Parapenaeopsis atlantica
+NPP,Parapenaeopsis
+BOB,Xiphopenaeus kroyeri
+TIT,Xiphopenaeus riveti
+TRV,Trachypenaeus curvirostris
+ASH,Artemesia longinaris
+PEZ,Penaeidae
+BOS,Xiphopenaeus
+SSH,Plesiopenaeus edwardsianus
+ARS,Aristaeomorpha foliacea
+ARA,Aristeus antennatus
+ARV,Aristeus varidens
+AXR,Aristeus
+ARI,Aristeidae
+PYX,Pandalus hypsinotus
+PWY,Pandalus platyceros
+PRA,Pandalus borealis
+PJK,Pandalus jordani
+AES,Pandalus montagui
+DUJ,Pandalus goniurus
+DUK,Pandalus kessleri
+PAN,Pandalus
+CHS,Heterocarpus reedi
+HUV,Heterocarpus vicarius
+HZK,Heterocarpus
+LKT,Plesionika martia
+LKW,Plesionika edwardsii
+NDJ,Pandalopsis japonica
+EKR,Acetes erythraeus
+AKS,Acetes japonicus
+SHS,Sergestidae
+CID,Caridina denticulata
+EXO,Exopalaemon modestus
+NLH,Nematopalaemon hastatus
+NLC,Nematopalaemon schmitti
+PVR,Palaemonetes varians
+PAA,Palaemon adspersus
+PIQ,Palaemon longirostris
+CPR,Palaemon serratus
+MNX,Macrobrachium nipponense
+PRF,Macrobrachium rosenbergii
+MBM,Macrobrachium malcolmsonii
+BKR,Macrobrachium lar
+PPF,Macrobrachium
+PPZ,Palaemonidae
+PAL,Palaemonidae
+CSH,Crangon crangon
+CVL,Sclerocrangon
+RSH,Sicyonia brevirostris
+YII,Sicyonia ingentis
+LAA,Pleoticus muelleri
+RRS,Pleoticus robustus
+SOK,Solenocera agassizii
+KNS,Haliporoides triarthrus
+JAQ,Haliporoides sibogae
+HJD,Haliporoides diomedeae
+FAC,Pasiphaea tarda
+DCP,Natantia
+LOJ,Panulirus longipes
+NUJ,Panulirus japonicus
+LMS,Panulirus polyphagus
+NUR,Panulirus ornatus
+SLC,Panulirus argus
+LOK,Panulirus homarus
+LOA,Panulirus cygnus
+NUG,Panulirus gracilis
+SLV,Panulirus
+LBC,Jasus lalandii
+LOF,Jasus frontalis
+LOG,Jasus verreauxi
+LBT,Jasus tristani
+LOR,Jasus edwardsii
+JSN,Jasus novaehollandiae
+JSP,Jasus paulensis
+PJH,Projasus bahamondei
+PSL,Palinurus mauritanicus
+SLO,Palinurus elephas
+SLN,Palinurus delagoae
+SLS,Palinurus gilchristi
+CRW,Palinurus
+URW,Puerulus sewelli
+VLO,Palinuridae
+CRD,Astacus leptodactylus
+AAS,Astacus astacus
+PCL,Pacifastacus leniusculus
+AUP,Austropotamobius pallipes
+RCW,Procambarus clarkii
+AYA,Euastacus armatus
+CRT,Cherax tenuimanus
+CDT,Cherax destructor
+CRP,Cherax quadricarinatus
+CJF,Parastacidae
+IBA,Ibacus alticrenatus
+IBC,Ibacus ciliatus
+THQ,Thenus orientalis
+YLL,Scyllarides latus
+YLA,Scyllarides aequinoctialis
+LOS,Scyllaridae
+NEM,Metanephrops mozambicus
+NEA,Metanephrops andamanicus
+MEC,Metanephrops challengeri
+MWF,Metanephrops
+NEP,Nephrops norvegicus
+LBA,Homarus americanus
+LBE,Homarus gammarus
+TQB,Thymops birsteini
+UOP,Upogebia pugettensis
+LOX,Reptantia
+AYS,Astacidae
+LQL,Pleuroncodes planipes
+PQG,Pleuroncodes monodon
+UDQ,Munida gregaria
+CZJ,Cervimunida johni
+LOQ,Galatheidae
+KCD,Paralithodes camtschaticus
+KCI,Paralithodes platypus
+KCY,Paralithodes brevipes
+KCS,Paralithodes
+KCR,Lithodes santolla
+KCM,Lithodes murrayi
+KAQ,Lithodes aequispinus
+KCZ,Lithodes
+PAG,Paralomis granulosa
+KCU,Paralomis aculeata
+KCV,Paralomis spinosissima
+KCF,Paralomis formosa
+KVV,Paralomis verrilli
+PAI,Paralomis
+KCX,Lithodidae
+UCD,Ucides occidentalis
+CRK,Cancer irroratus
+DUN,Cancer magister
+CRE,Cancer pagurus
+CRJ,Cancer borealis
+ROC,Cancer productus
+CWE,Cancer edwardsii
+KPC,Carpilius corallinus
+HWP,Homalaspis plana
+STC,Menippe mercenaria
+YBX,Charybdis
+SCD,Portunus pelagicus
+GAZ,Portunus trituberculatus
+CRS,Portunus
+CRB,Callinectes sapidus
+CRZ,Callinectes danae
+CAL,Callinectes
+CRG,Carcinus maenas
+CMR,Carcinus aestuarii
+MUD,Scylla serrata
+YLW,Scylla olivacea
+YAR,Scylla paramamosain
+LIO,Necora puber
+QPH,Polybius henslowii
+SWM,Portunidae
+ERS,Eriocheir sinensis
+MXT,Mithrax armatus
+SCR,Maja squinado
+CRQ,Chionoecetes opilio
+CVB,Chionoecetes bairdi
+CWJ,Chionoecetes japonicus
+PCR,Chionoecetes
+HBZ,Erimacrus isenbeckii
+KEM,Libinia emarginata
+CGE,Chaceon maritae
+KEF,Chaceon affinis
+CRR,Chaceon quinquedens
+HBN,Chaceon notialis
+GER,Chaceon
+GRQ,Geryon longipes
+CRA,Brachyura
+FCX,Crustacea
+CRU,Crustacea
+PEE,Littorina littorea
+PER,Littorina
+MUE,Murex
+BOY,Bolinus brandaris
+RPW,Rapana venosa
+RPN,Rapana
+SNE,Concholepas concholepas
+ABF,Haliotis rufescens
+ABJ,Haliotis discus
+ABG,Haliotis gigantea
+ABP,Haliotis midae
+ABR,Haliotis rubra
+HLT,Haliotis tuberculata
+DZS,Haliotis iris
+ABX,Haliotis
+RQN,Trochus niloticus
+TSH,Ex Trochus spp
+TOS,Turbo cornutus
+UOS,Turbo setosus
+GSH,Ex Turbo spp
+COO,Strombus gigas
+CON,Strombus
+WHE,Buccinum undatum
+YJS,Babylonia spirata
+WJT,Busycon carica
+WKO,Busycon sinistrum
+WHX,Busycon
+WKQ,Busycotypus canaliculatus
+TOQ,Tonna galea
+NSQ,Nassarius mutabilis
+YBC,Cymbium cymbium
+CXY,Cymbium
+ZDF,Zidona dufresnei
+GFZ,Cipangopaludina chinensis
+UDX,Trochita
+GAS,Gastropoda
+RKQ,Arca noae
+RQZ,Arca zebra
+ARK,Arca
+ACB,Scapharca broughtonii
+MCL,Scapharca subcrenata
+BLC,Anadara granosa
+NDN,Anadara grandis
+NQT,Anadara tuberculosa
+NDZ,Anadara ovalis
+BLS,Anadara
+SWT,Anodonta cygnea
+FSH,Ex Unionidae
+PNM,Pinctada margaritifera
+OSH,Ex Pinctada spp
+PTE,Pteria penguin
+OCH,Ostrea chilensis
+OYF,Ostrea edulis
+DRY,Ostrea lutaria
+OYX,Ostrea
+CSC,Saccostrea cuccullata
+OYS,Saccostrea commercialis
+OYG,Crassostrea gigas
+OYM,Crassostrea rhizophorae
+OYA,Crassostrea virginica
+OYI,Crassostrea madrasensis
+CSI,Crassostrea iredalei
+OYR,Crassostrea corteziensis
+OGZ,Crassostrea gasar
+OYC,Crassostrea
+OYH,Ostreola conchaphila
+OST,Ostreidae
+QSC,Aequipecten opercularis
+SCE,Pecten maximus
+SJA,Pecten jacobaeus
+SCZ,Pecten novaezelandiae
+SSC,Pecten fumatus
+YKD,Lyropecten subnodosus
+SCA,Placopecten magellanicus
+SCC,Argopecten gibbus
+SCB,Argopecten irradians
+SCQ,Argopecten purpuratus
+SCH,Argopecten ventricosus
+VSC,Chlamys varia
+ISC,Chlamys islandica
+SCG,Patinopecten caurinus
+JSC,Patinopecten yessoensis
+ZYE,Zygochlamys delicatula
+ZYP,Zygochlamys patagonica
+SCX,Pectinidae
+CLQ,Arctica islandica
+MUK,Mytilus coruscus
+MUJ,Mytilus californianus
+MYC,Mytilus chilensis
+MUS,Mytilus edulis
+MSR,Mytilus platensis
+MSM,Mytilus galloprovincialis
+MYA,Mytilus planulatus
+CHC,Choromytilus chorus
+MOD,Modiolus
+MSL,Perna perna
+MSV,Perna viridis
+MUZ,Perna canaliculus
+MSC,Aulacomya ater
+MSX,Mytilidae
+SVE,Chamelea gallina
+CTS,Venerupis pullastra
+VNA,Venerupis aurea
+VNR,Venerupis rhomboides
+KLK,Callista chione
+KNU,Chione stutchburyi
+HCJ,Meretrix lusoria
+HCX,Meretrix
+CTG,Ruditapes decussatus
+CLJ,Ruditapes philippinarum
+TPS,Ruditapes
+ITT,Pitar rostratus
+TWG,Tawera gayi
+TVM,Tivela mactroides
+VEV,Venus verrucosa
+KNJ,Cyclina sinensis
+BCL,Saxidomus giganteus
+FAG,Paphia gallus
+NCL,Paphia
+PTS,Protothaca staminea
+TCL,Protothaca thaca
+CLH,Mercenaria mercenaria
+CLV,Veneridae
+HCL,Pseudocardium sybillae
+TQU,Tresus nuttallii
+TQZ,Tresus
+MTV,Mactra veneriformis
+MAG,Mactra glabrata
+CLB,Spisula solidissima
+CLT,Spisula polynyma
+ULO,Spisula solida
+ULT,Spisula subtruncata
+SSD,Spisula
+MUN,Mulinia
+GKL,Glycymeris glycymeris
+DON,Donax
+RAZ,Solen
+CLR,Ensis directus
+EQE,Ensis ensis
+EQI,Ensis siliqua
+RAP,Siliqua patula
+SOI,Solenidae
+CLS,Mya arenaria
+GEC,Panopea generosa
+YMX,Polymesoda expansa
+CMJ,Corbicula japonica
+CMA,Corbicula fluminea
+KTG,Cerastoderma glaucum
+COC,Cerastoderma edule
+KCL,Clinocardium nuttallii
+TIX,Trachycardium muricatum
+COZ,Cardiidae
+AFQ,Paphies australis
+CLM,Mesodesma donacium
+TDG,Tridacna gigas
+TDD,Tridacna derasa
+TDS,Tridacna squamosa
+DKC,Tridacna crocea
+DKX,Tridacna maxima
+QQX,Tridacna
+HIP,Hippopus hippopus
+TQY,Atrina
+FSV,Asaphis violascens
+OIF,Soletellina diphos
+TUW,Semele solida
+SVT,Sinonovacula constricta
+FRL,Pharus legumen
+TWL,Tellina
+OBN,Scrobicularia plana
+CLX,Bivalvia
+CTC,Sepia officinalis
+IAH,Sepia pharaonis
+CTL,Sepiidae
+SQP,Loligo gahi
+SQO,Loligo opalescens
+SQL,Loligo pealeii
+SQR,Loligo vulgaris
+OJD,Loligo duvaucelii
+CHO,Loligo reynaudii
+SQF,Loligo forbesi
+SQC,Loligo
+UHL,Sepioteuthis lessoniana
+OUW,Alloteuthis
+OFJ,Ommastrephes bartrami
+SQI,Illex illecebrosus
+SQM,Illex coindetii
+SQA,Illex argentinus
+TDQ,Todaropsis eblanae
+GIS,Dosidicus gigas
+SQE,Todarodes sagittatus
+TFP,Todarodes filippovae
+SQJ,Todarodes pacificus
+TSQ,Nototodarus sloanii
+SQS,Martialia hyadesi
+SQU,Loliginidae
+OIJ,Onykia ingens
+UHB,Onykia robusta
+PRD,Pareledone
+OCC,Octopus vulgaris
+OQY,Octopus maya
+OCZ,Octopus
+EOI,Eledone cirrhosa
+EDT,Eledone moschata
+OCM,Eledone
+OCT,Octopodidae
+YTT,Berryteuthis magister
+GDW,Gonatidae
+CEP,Cephalopoda
+MOF,Mollusca
+MOL,Mollusca
+MSH,Ex Mollusca
+SSL,Eumetopias jubatus
+SEN,Callorhinus ursinus
+NSL,Phocarctos hookeri
+SEF,Arctocephalus australis
+SEK,Arctocephalus pusillus
+SNZ,Arctocephalus forsteri
+SEL,Otaria flavescens
+WAL,Odobenus rosmarus
+SES,Mirounga leonina
+SLP,Hydrurga leptonyx
+SEH,Phoca groenlandica
+SEC,Phoca vitulina
+SER,Phoca hispida
+SLR,Phoca fasciata
+SAC,Phoca caspica
+SBK,Phoca sibirica
+SST,Phoca largha
+SEB,Erignathus barbatus
+SEZ,Cystophora cristata
+SEG,Halichoerus grypus
+SXX,Otariidae
+SEW,Trichechus inunguis
+BCW,Ziphius cavirostris
+BBW,Mesoplodon densirostris
+BWW,Mesoplodon bidens
+BGW,Mesoplodon europaeus
+TSW,Mesoplodon layardii
+BDW,Mesoplodon bowdoini
+BJW,Mesoplodon stejnegeri
+MEP,Mesoplodon
+BOW,Hyperoodon ampullatus
+BEW,Berardius bairdii
+SPW,Physeter macrocephalus
+IRD,Orcaella brevirostris
+IDB,Orcaella heinsohni
+FAW,Pseudorca crassidens
+PIW,Globicephala melas
+SHW,Globicephala macrorhynchus
+GLO,Globicephala
+DCO,Delphinus delphis
+DCZ,Delphinus capensis
+DRR,Grampus griseus
+MEW,Peponocephala electra
+TUC,Sotalia fluviatilis
+TZG,Sotalia guianensis
+DHI,Sousa chinensis
+RTD,Steno bredanensis
+KIW,Orcinus orca
+RNW,Lissodelphis borealis
+CMD,Cephalorhynchus commersonii
+HCD,Cephalorhynchus hectori
+DWP,Lagenorhynchus obliquidens
+DDU,Lagenorhynchus obscurus
+BWD,Lagenorhynchus albirostris
+DWH,Lagenorhynchus acutus
+PLD,Lagenorhynchus australis
+DBO,Tursiops truncatus
+DBZ,Tursiops aduncus
+DPN,Stenella attenuata
+DSI,Stenella longirostris
+DST,Stenella coeruleoalba
+DSA,Stenella frontalis
+DCL,Stenella clymene
+DSP,Stenella
+DLP,Delphinidae
+PHR,Phocoena phocoena
+BRP,Phocoena spinipinnis
+VAQ,Phocoena sinus
+SPP,Phocaena dioptrica
+PFI,Neophocaena phocaenoides
+PDA,Phocoenoides dalli
+BEL,Delphinapterus leucas
+NAR,Monodon monoceros
+PYW,Kogia breviceps
+DWW,Kogia sima
+BOT,Inia geoffrensis
+FRA,Pontoporia blainvillei
+ODN,Odontoceti
+MIW,Balaenoptera acutorostrata
+BRW,Balaenoptera edeni
+SIW,Balaenoptera borealis
+BLW,Balaenoptera musculus
+FIW,Balaenoptera physalus
+HUW,Megaptera novaeangliae
+EUG,Eubalaena glacialis
+EUA,Eubalaena australis
+BMY,Balaena mysticetus
+GRW,Eschrichtius robustus
+MYS,Mysticeti
+FGI,Rana ridibunda
+FOK,Rana catesbeiana
+FRG,Rana
+ZHB,Hoplobatrachus rugulosus
+AYW,Malaclemys terrapin
+TUG,Chelonia mydas
+TTH,Eretmochelys imbricata
+TTL,Caretta caretta
+TTS,Trionyx sinensis
+TUL,Testudinata
+TTX,Testudinata
+IMO,Caiman latirostris
+IMY,Caiman yacare
+CAI,Caiman crocodilus
+AGM,Alligator mississippiensis
+CDP,Crocodylus porosus
+CDS,Crocodylus siamensis
+CRH,Crocodylus johnsoni
+CRI,Crocodylus niloticus
+CNG,Crocodylus novaeguineae
+CMB,Crocodylus rhombifer
+CME,Crocodylus moreletii
+YUU,Crocodylus acutus
+YUK,Crocodylia cataphractus
+MHW,Melanosuchus niger
+UCB,Paleosuchus palpebrosus
+UCI,Paleosuchus trigonatus
+HGH,Hippospongia lachne
+QGB,Spongia barbara
+QGG,Spongia graminea
+SPO,Spongiidae
+QPD,Spongilla
+DMO,Demospongiae
+CNI,Cnidaria
+MFX,Stomolophus meleagris
+CWF,Chrysaora plocamia
+JCD,Catostylus
+JEL,Rhopilema
+COL,Corallium rubrum
+COJ,Corallium japonicum
+CEL,Corallium elatius
+COK,Corallium konojoi
+CSE,Corallium secundum
+CDE,Corallium
+GDV,Goniocorella dumosa
+QAE,Pseudopterogorgia elisabethae
+GGW,Gorgoniidae
+FIX,Flabellum
+BFU,Paragorgia arborea
+CSS,Scleractinia
+AQZ,Antipatharia
+ATX,Actiniaria
+NTW,Pennatulacea
+WOR,Polychaeta
+HSC,Limulus polyphemus
+ECH,Echinodermata
+STH,Asterias rubens
+STF,Asteroidea
+URC,Strongylocentrotus
+URM,Paracentrotus lividus
+URS,Echinus esculentus
+UCH,Loxechinus albus
+URX,Echinoidea
+HFC,Holothuria scabra
+HFN,Holothuria nobilis
+HFF,Holothuria fuscogilva
+KHG,Cucumaria frondosa
+TFQ,Thelenota ananas
+CUJ,Apostichopus japonicus
+CUX,Holothuroidea
+SSR,Pyura stolonifera
+SSE,Pyura chilensis
+SSG,Microcosmus sulcatus
+SSX,Ascidiacea
+SPX,Salpidae
+INV,Invertebrata
+ULL,Spirulina platensis
+ULX,Spirulina minima
+SIZ,Spirulina
+HQW,Chlorella vulgaris
+UNI,Dunaliella salina
+KII,Codium fragile
+KQR,Caulerpa racemosa
+CAU,Caulerpa
+MTN,Monostroma nitidum
+EOW,Enteromorpha clathrata
+UVP,Ulva pertusa
+UYH,Ulva
+HZP,Haematococcus pluvialis
+UEC,Capsosiphon fulvescens
+SWG,Chlorophyceae
+LQD,Laminaria digitata
+LNJ,Laminaria japonica
+LAH,Laminaria hyperborea
+LQX,Saccharina latissima
+AJC,Alaria esculenta
+UDP,Undaria pinnatifida
+UDS,Undaria
+LJX,Lessonia nigrescens
+LJZ,Lessonia trabeculata
+EOZ,Lessonia
+MXY,Macrocystis pyrifera
+GQO,Macrocystis
+ASN,Ascophyllum nodosum
+DVA,Durvillaea antarctica
+YQT,Cystoseira barbata
+GQB,Sargassum fusiforme
+QWX,Sargassum
+NYQ,Nemacystus decipiens
+SWB,Phaeophyceae
+YFQ,Phyllophora
+GKF,Gymnogongrus furcellatus
+EMA,Kappaphycus alvarezii
+EMI,Eucheuma denticulatum
+EMX,Eucheuma
+GJW,Gracilaria verrucosa
+GZG,Fragilaria gracilis
+GLS,Gracilaria
+RHP,Palmaria palmata
+IMS,Chondrus crispus
+GJK,Gigartina skottsbergii
+KDM,Chondracanthus chamissoi
+SBQ,Sarcothalia crispata
+MZL,Mazzaella laminarioides
+GHG,Gigartinaceae
+OFN,Porphyra linearis
+YKN,Porphyra columbina
+PRT,Porphyra tenera
+FYS,Porphyra
+DGM,Digenea simplex
+ASR,Asparagopsis
+GDY,Gelidium amansii
+GEL,Gelidium
+KFV,Callophyllis variegata
+SWR,Rhodophyceae
+ZOM,Zostera marina
+CJW,Scirpus
+APL,Plantae aquaticae
+SWX,Algae
