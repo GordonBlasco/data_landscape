@@ -24,8 +24,6 @@ fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_G
   left_join(., nei_levels)
 
 
-
-
 RAM_all <- load_ramlegacy()
 RAM_meta <- RAM_all[["metadata"]]
 
@@ -39,19 +37,14 @@ ram_names <- RAM_meta %>%
   distinct(scientificname) %>% 
   left_join(., fao_species, by = c("scientificname" = "Scientific_Name")) 
 
-
+val_prep <- val_fishbase_final %>% 
+  select(SPECIES, validated_name_final) %>% 
+  filter(!is.na(validated_name_final))
 
 ram_temp1 <- ram_names %>% 
   filter(is.na(SPECIES)) %>% 
-  select(scientificname)
-
-
-
-
-
-
-
-
+  select(scientificname) %>% 
+  left_join(val_prep, by = c("scientificname"="validated_name_final"))
 
 fao_to_ram <- ram_names %>% # must be 360 obs long
   filter(!is.na(SPECIES)) # at 284, 76 more to go.
