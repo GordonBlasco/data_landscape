@@ -1,20 +1,7 @@
-##################################################
-## Project: 
-## Script purpose: 
-## Date:
-## Author: Gordon Blasco
-##################################################
-
-## Load libraries
-##################################################
 library(tidyverse)
 library(ramlegacy)
 library(rfishbase)
-
-
-
-## Load data from FAO and RAM
-##################################################
+library(janitor)
 
 source("src/file_names.R") # Sets file directories 
 fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
@@ -22,37 +9,30 @@ nei_levels <- read_csv("data/nei_codes.csv")
 
 fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
   rename(SPECIES = `3Alpha_Code`) %>% 
-  filter(SPECIES %in% nei_levels$SPECIES) %>% 
+  #filter(SPECIES %in% nei_levels$SPECIES) %>% 
   left_join(., nei_levels)
 
 validated_names <- read_csv("data/worms_validated_names.csv") %>% 
   rename(SPECIES = alpha_code)
+
+val_fishbase <- read_csv("data/fao_species_fishbase_validated")
 
 
 RAM_all <- load_ramlegacy()
 RAM_meta <- RAM_all[["metadata"]]
 
 
-
-## Join RAM and FAO
-##################################################
-
-### first join on scientific name
 ram_names <- RAM_meta %>% 
   distinct(scientificname) %>% 
-  left_join(., fao_species, by = c("scientificname" = "Scientific_Name")) 
+  left_join(., fao_species, by = c("scientificname" = "Scientific_Name")) %>% 
+  select(scientificname, SPECIES)
 
-val_prep <- validated_names %>% 
-  select(SPECIES, resolved_sci_name) %>% 
-  filter(!is.na(resolved_sci_name))
 
 ram_temp1 <- ram_names %>% 
-  filter(is.na(SPECIES)) %>% 
-  select(scientificname) %>% 
-  left_join(val_prep, by = c("scientificname"="resolved_sci_name")) 
+  filter(!is.na(SPECIES)) %>% 
+  select(scientificname, SPECIES)
 
-
-ram_temp2 <- ram_temp1 %>% 
+ram_failed <- ram_names %>% 
   filter(is.na(SPECIES)) %>% 
   select(scientificname) %>% 
   mutate(fishbase_name = lapply(.$scientificname, validate_names, server = "fishbase")) %>% 
@@ -62,7 +42,7 @@ ram_temp2 <- ram_temp1 %>%
          sealifebase_name = as.character(sealifebase_name))
 
 
-ram_val <- ram_temp2 %>% 
+ram_val <- ram_failed %>% 
   mutate(
     validated_name_final =
       case_when(
@@ -76,26 +56,42 @@ ram_val <- ram_temp2 %>%
   rename(scientificname = validated_name_final) %>% 
   left_join(., fao_species, by = c("scientificname" = "Scientific_Name")) 
 
+ram_temp2 <- ram_val %>% 
+  filter(!is.na(SPECIES)) %>% 
+  select("scientificname", SPECIES)
 
-ram_val_2 <- ram_val
+ram_val2 <- ram_val %>% 
   filter(is.na(SPECIES)) %>% 
+  select(scientificname) %>%
+  left_join(., val_fishbase, by = c("scientificname" = "validated_name_final")) 
+
+ram_temp3 <- ram_val2 %>% 
+  filter(!is.na(`SPECIES`)) %>%
+  select("scientificname", SPECIES)
+
+
+ram_remainder <- ram_val2 %>% 
+  filter(is.na(`SPECIES`)) %>% 
   select(scientificname) %>% 
-    left_join(val_prep, by = c("scientificname"="validated_name_final")) 
+  mutate(SPECIES = 
+           case_when(
+             scientificname == "Pleuronectes quadrituberculatus" ~ "ALP",
+             scientificname == "Makaira mazara" ~ "BUM",
+             scientificname == "Sebastes variabilis" ~ "NA",
+             scientificname == "Sebastes norvegicus" ~ "NA",
+             scientificname == "Tanakius kitaharae" ~ "NA"
+           )) %>% 
+  filter(SPECIES != "NA") %>% 
+  select("scientificname", SPECIES)
 
 
+ram_to_fao_species <- ram_temp1 %>% 
+  bind_rows(ram_temp2) %>% 
+  bind_rows(ram_temp3) %>% 
+  bind_rows(ram_remainder) %>% 
+  select(scientificname, SPECIES)%>% 
+  filter(!is.na(SPECIES)) %>% 
+  distinct(scientificname, SPECIES)
 
-ram_val_4 <- ram_val_2 %>% 
-  filter(is.na(SPECIES)) %>% 
-  select(scientificname) %>% 
-  left_join(validated_names, by = c("scientificname"="resolved_sci_name")) 
 
-
-
-
-
-fao_to_ram <- ram_names %>% # must be 360 obs long
-  filter(!is.na(SPECIES)) %>% # at 284, 76 more to go.
-  select(SPECIES, scientificname) %>% 
-  rbind(ram_temp1) %>% 
-  filter(!is.na(SPECIES)) # at 301 - 59  more to go!
-
+write_csv(ram_to_fao_species, "data/RAM_to_FAO.csv")
