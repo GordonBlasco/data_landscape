@@ -1,8 +1,8 @@
 ################################################################################
-## Project: Data Landscape Paper
-## Script purpose: Generate figure 1
-## Date: 5/29/2020
-## Author: Gordon Blasco
+## Project :  Data Landscape Paper
+## Purpose :  Generate figure 1
+##  Date   :  5/29/2020
+## Author  :  Gordon Blasco
 ################################################################################
 
 
@@ -14,10 +14,19 @@ library(patchwork)
 
 source("~/github/aquaculture/src/directories.R") # Sets file directories 
 
-fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
-fao_species    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
+# Raw fao data
+fao_production <- read_csv(file.path(dir_raw_data, 
+                           "/FAO/production/TS_FI_PRODUCTION.csv")) 
+
+# Species ref
+fao_species    <- read_csv(file.path(dir_raw_data, 
+                           "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% 
   rename(SPECIES = "3Alpha_Code")
-fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) # Species ref
+
+# Countries refrence
+fao_country    <- read_csv(file.path(dir_raw_data, 
+                           "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) 
+
 fao_neis       <- read_csv("data/nei_codes.csv")
 
 
@@ -230,8 +239,31 @@ select(Name_En, Scientific_Name)
 
 
 
-
-
+# neither counts
+neither_counts <- spp_info %>% 
+  filter(id_level == "Species") %>% 
+  mutate(total_number = 1,
+         neither = if_else((is.na(RAM) & is.na(IUCN)), 1, 0),
+         all = if_else((FAO == "yes" & RAM == "yes" & IUCN == "yes"), 1, 0),
+         one_of = if_else((RAM == "yes" & is.na(IUCN))| is.na(RAM) & IUCN == "yes", 1, 0),
+         in_ram = if_else(RAM == "yes", 1, 0),
+         only_ram = if_else(RAM == "yes" & is.na(IUCN), 1, 0),
+         only_iucn = if_else(IUCN == "yes" & is.na(RAM), 1, 0),
+         in_iucn = if_else(IUCN == "yes", 1, 0)
+         ) %>% 
+  group_by(Major_Group) %>% 
+  summarize(
+    total_spp = n(),
+    in_ram = sum(in_ram, na.rm = TRUE),
+    in_iucn = sum(in_iucn, na.rm = TRUE),
+    neither = sum(neither, na.rm = TRUE),
+    all = sum(all, na.rm = TRUE),
+    one_of = sum(one_of, na.rm = TRUE),
+    only_ram = sum(only_ram, na.rm = TRUE),
+    only_iucn = sum(only_iucn, na.rm = TRUE),
+  ) %>% 
+  adorn_totals() %>% 
+  mutate(perc_neither = neither/total_spp)
 
 
 
