@@ -1,15 +1,10 @@
----
-title: "Untitled"
-author: "Gordon Blasco"
-date: "5/27/2020"
-output: html_document
----
+#------------------------------------------------------------------------------#
+## Project :  Data Landscape
+## Purpose :  Generate figure 2
+##  Date   :  06/22/2020
+## Author  :  Gordon Blasco
+#------------------------------------------------------------------------------#
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r}
 library(tidyverse)
 library(broom)
 library(patchwork)
@@ -27,12 +22,12 @@ freshwater <- fao_production %>%
   distinct(SPECIES) %>% 
   left_join(fao_species) %>% 
   filter(ISSCAAP_Group == "Miscellaneous freshwater fishes"|
-         ISSCAAP_Group == "Freshwater crustaceans"|
-         CPC_Class     == "Freshwater fish, live, fresh or chilled"|
-         ISSCAAP_Group == "Freshwater molluscs"|
-         SPECIES       == "FSH"|
-         SPECIES       == "QEX"|
-         SPECIES       == "QPD") %>% 
+           ISSCAAP_Group == "Freshwater crustaceans"|
+           CPC_Class     == "Freshwater fish, live, fresh or chilled"|
+           ISSCAAP_Group == "Freshwater molluscs"|
+           SPECIES       == "FSH"|
+           SPECIES       == "QEX"|
+           SPECIES       == "QPD") %>% 
   pull(SPECIES)
 
 spp_info <- fao_production %>% 
@@ -41,9 +36,9 @@ spp_info <- fao_production %>%
   left_join(fao_neis) %>% 
   mutate(is_freshwater = if_else(SPECIES %in% freshwater, "freshwater", "marine"))
 
-```
-
-```{r}
+####  section_name ####
+#------------------------------------------------------------------------------#
+ 
 over_time <- fao_production %>% 
   filter(SOURCE == 4) %>% 
   left_join(spp_info) %>% 
@@ -76,9 +71,12 @@ summ(lm_growth_prop)
 lm_total_prop <- lm(formula = Nei ~ YEAR, over_time)
 tidy(lm_total_prop)
 summ(lm_total_prop)
-```
 
-```{r}
+
+####  section_name ####
+#------------------------------------------------------------------------------#
+ 
+
 by_country <- fao_production %>% 
   filter(SOURCE == 4) %>% 
   left_join(spp_info) %>% 
@@ -114,9 +112,9 @@ tidy(lm_median)
 summ(lm_median)
 
 confint(lm_median, level = 0.95)
-```
 
-```{r}
+
+
 country_prep <- fao_country %>% 
   select(UN_Code, Continent_Group) %>% 
   #mutate(Continent_Group = if_else(UN_Code == 156, "China", Continent_Group)) %>% 
@@ -126,7 +124,7 @@ country_prep <- fao_country %>%
   ) %>% 
   distinct(COUNTRY, .keep_all = TRUE) %>% 
   filter(!(is.na(region))) 
-  
+
 
 
 country_contrib <- fao_production %>% 
@@ -150,11 +148,10 @@ country_contrib$region_new <- ordered(country_contrib$region, levels =country_or
 
 
 ggplot(country_contrib, aes(x=YEAR, y=percentage, fill=region_new)) + 
-    geom_area(alpha=0.6 , size=1, colour="black")
+  geom_area(alpha=0.6 , size=1, colour="black")
 
-```
 
-plot it up
+
 ```{r}
 prop_plot <- ggplot(over_time, aes(x = YEAR, y = prop_nei))+
   geom_point()+
@@ -171,7 +168,7 @@ prop_plot <- ggplot(over_time, aes(x = YEAR, y = prop_nei))+
     axis.title.x = element_blank(),
     text = element_text(family = 'serif'),
     plot.title.position = "plot"
-   )
+  )
 
 box_plot <- ggplot(by_country, aes(x = YEAR, y = prop_nei, group = YEAR))+
   geom_boxplot()+
@@ -182,14 +179,14 @@ box_plot <- ggplot(by_country, aes(x = YEAR, y = prop_nei, group = YEAR))+
     title = "B) Median of NEI Resolved Catch for All Reporting Countries"
   )+
   scale_x_continuous(expand = c(0,0))+
-   theme(
+  theme(
     axis.title.x = element_blank(),
     text = element_text(family = 'serif'),
     plot.title.position = "plot"
-   )
+  )
 
 by_region <- ggplot(country_contrib, aes(x=YEAR, y=percentage, fill=region_new)) + 
-    geom_area(alpha=0.6 , size=1, colour="black")+
+  geom_area(alpha=0.6 , size=1, colour="black")+
   ggpubr::theme_pubclean()+
   labs(
     x = "Year", 
@@ -197,12 +194,12 @@ by_region <- ggplot(country_contrib, aes(x=YEAR, y=percentage, fill=region_new))
     title = "C) Percent Contribution by Region"
   )+
   scale_x_continuous(expand = c(0,0))+
-   theme(
+  theme(
     text = element_text(family = 'serif'),
     plot.title.position = "plot",
     legend.title = element_blank()
-   )
- 
+  )
+
 
 figure_2 <- prop_plot/box_plot/by_region &
   labs_pubr(base_size = 16)&
@@ -211,7 +208,14 @@ figure_2 <- prop_plot/box_plot/by_region &
         axis.title.y = element_text(size = 11),
         axis.title.x = element_blank())
 
+figure_2
+
 ggsave(plot = figure_2, filename = "figures/figure_2.png", device = "png")
 
-```
+
+
+
+
+
+
 

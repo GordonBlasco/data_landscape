@@ -12,6 +12,8 @@ library(tidyverse)
 library(stringr)
 library(sf)
 library(rmapshaper)
+library(patchwork)
+library(viridis)
 
 source("~/github/aquaculture/src/directories.R") # Sets file directories 
 
@@ -81,7 +83,7 @@ national_marine <- fao_production %>%
 #### Load in maps ####
 #------------------------------------------------------------------------------#
 # read in world map
-world_fn <- "/home/shares/clean-seafood/raw_data/world_vec/world_simplified.shp"
+world_fn <- "/home/shares/clean-seafood/raw_data/world_vec/world_vector.shp"
 world_raw <- st_read(world_fn)
 world_df <- st_set_geometry(world_raw, NULL) %>% # remove geometry
   distinct(ISO3) %>% 
@@ -94,7 +96,7 @@ map_freshwater <- world_raw %>%
   left_join(national_fresh) #%>% 
   #mutate_if(is.numeric, replace_na, 0)
 
-test <- st_set_geometry(map_freshwater, NULL)
+test_1 <- st_set_geometry(map_freshwater, NULL)
 
 
 map_marine <- world_raw %>% 
@@ -105,7 +107,7 @@ map_marine <- world_raw %>%
     TRUE ~ total_landed
   ))
 
-test <- st_set_geometry(map_marine, NULL)
+test_2 <- st_set_geometry(map_marine, NULL)
 
 
 
@@ -113,14 +115,58 @@ test <- st_set_geometry(map_marine, NULL)
 #### Plotting them up! ####
 #------------------------------------------------------------------------------#
 
-
-ggplot(map_freshwater, aes(fill = total_landed))+
-  geom_sf()
-
-
-ggplot(map_marine, aes(fill = total_landed))+
-  geom_sf(color = "black")
+# nei tonnage plot
+fresh_plot <- ggplot(map_freshwater, aes(fill = log(total_landed+1)))+
+  geom_sf(size = .1) +
+  labs( title = "Freshwater NEI landings in 2016")
 
 
+marine_plot <- ggplot(map_marine, aes(fill = log(total_landed+1)))+
+  geom_sf(size = .1) +
+  labs(title = "Marine NEI landings in 2016")
+
+# prop NEI plots
+fresh_prop_plot <- ggplot(map_freshwater, aes(fill = prop_nei))+
+  geom_sf(size = .1) +
+  labs( title = "Freshwater NEI landings in 2016")
+
+marine_prop_plot <- ggplot(map_marine, aes(fill = prop_nei))+
+  geom_sf(size = .1) +
+  labs(title = "Marine NEI landings in 2016")
 
 
+patches_prop <- (fresh_prop_plot  + plot_layout(guides = 'keep')) +
+                 marine_prop_plot + plot_layout(guides = 'collect')
+
+patches_prop
+
+patches <- (fresh_plot  + plot_layout(guides = 'keep')) + 
+            marine_plot + plot_layout(guides = 'collect')
+
+patches <- patches & 
+  theme_bw() &
+  scale_fill_viridis(direction = 1, limits = c(0, 16.5), option = "magma") &
+  scale_y_continuous(expand = c(0,0)) &
+  scale_x_continuous(expand = c(0,0)) &
+  guides(fill = guide_legend(title = "Nei Biomass Tonnes (log scale)"#, 
+                             #title.position = "top", 
+                             #title.hjust = 0.5)
+  )) &
+  theme(legend.title.align = 0.5,
+        legend.direction = "horizontal",
+        legend.position = 'bottom',
+        legend.box.just = "center")
+
+final_plot <- patches + plot_layout(guides = 'collect')#, ncol = 3#, 
+#widths = c(5, 1, 5)#,
+# heights = c(1,1,1)
+#)
+
+
+
+
+ggsave(final_plot, "figures/figure_3.png", 
+       width = 11, 
+       height = 8, 
+       device = "png", 
+       units = "in")
