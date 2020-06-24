@@ -152,7 +152,6 @@ ggplot(country_contrib, aes(x=YEAR, y=percentage, fill=region_new)) +
 
 
 
-```{r}
 prop_plot <- ggplot(over_time, aes(x = YEAR, y = prop_nei))+
   geom_point()+
   geom_line()+
