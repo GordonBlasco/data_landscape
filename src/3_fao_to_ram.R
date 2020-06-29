@@ -5,17 +5,25 @@ library(janitor)
 
 source("src/file_names.R") # Sets file directories 
 fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
+
+species_mask <- fao_production %>% 
+  distinct(SPECIES) %>% 
+  pull(SPECIES)
+
+
 nei_levels <- read_csv("data/nei_codes.csv")
 
 fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
   rename(SPECIES = `3Alpha_Code`) %>% 
-  #filter(SPECIES %in% nei_levels$SPECIES) %>% 
+  filter(SPECIES %in% species_mask) %>% 
   left_join(., nei_levels)
 
 validated_names <- read_csv("data/worms_validated_names.csv") %>% 
-  rename(SPECIES = alpha_code)
+  rename(SPECIES = alpha_code) %>% 
+  filter(SPECIES %in% species_mask) 
 
-val_fishbase <- read_csv("data/fao_species_fishbase_validated")
+val_fishbase <- read_csv("data/fao_species_fishbase_validated") %>% 
+  filter(SPECIES %in% species_mask)
 
 
 RAM_all <- load_ramlegacy()
@@ -70,28 +78,32 @@ ram_temp3 <- ram_val2 %>%
   select("scientificname", SPECIES)
 
 
-ram_remainder <- ram_val2 %>% 
-  filter(is.na(`SPECIES`)) %>% 
-  select(scientificname) %>% 
-  mutate(SPECIES = 
-           case_when(
-             scientificname == "Pleuronectes quadrituberculatus" ~ "ALP",
-             scientificname == "Makaira mazara" ~ "BUM",
-             scientificname == "Sebastes variabilis" ~ "NA",
-             scientificname == "Sebastes norvegicus" ~ "NA",
-             scientificname == "Tanakius kitaharae" ~ "NA"
-           )) %>% 
-  filter(SPECIES != "NA") %>% 
-  select("scientificname", SPECIES)
-
-
 ram_to_fao_species <- ram_temp1 %>% 
   bind_rows(ram_temp2) %>% 
   bind_rows(ram_temp3) %>% 
-  bind_rows(ram_remainder) %>% 
   select(scientificname, SPECIES)%>% 
   filter(!is.na(SPECIES)) %>% 
   distinct(scientificname, SPECIES)
 
 
-write_csv(ram_to_fao_species, "data/RAM_to_FAO.csv")
+ram_final_check <- RAM_meta %>% 
+  distinct(scientificname) %>% 
+  left_join(ram_to_fao_species) %>% 
+  filter(is.na(SPECIES)) #%>% 
+  mutate(SPECIES = 
+           case_when(
+             scientificname == "Pleuronectes quadrituberculatus" ~ "ALP",
+             scientificname == "Pandalus eous" ~ "NA",
+             scientificname == "Makaira mazara" ~ "BUM",
+             
+             scientificname == "Clupea bentincki" ~ "NA",
+             scientificname == "Sebastes variabilis" ~ "NA",
+             scientificname == "Sebastes norvegicus" ~ "NA",
+             scientificname == "Chrysophrys auratus" ~ "NA",
+             scientificname == "Ammodytes hexapterus" ~ "NA",
+             scientificname == "Neoplatycephalus richardsoni" ~ "NA",
+             scientificname == "Pseudopleuronectes herzensteini" ~ "NA"
+           ))
+
+
+#write_csv(ram_to_fao_species, "data/RAM_to_FAO.csv")
