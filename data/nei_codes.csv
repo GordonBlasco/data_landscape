@@ -679,7 +679,7 @@ HOF,Species,NA,included
 MRG,Species,NA,included
 HKK,Species,NA,included
 HKX,Nei,genus,included
-HKC,Species,NA,included
+HKC,Nei,mixed species,included
 GRM,Species,NA,included
 GRN,Species,NA,included
 RHG,Species,NA,included
@@ -1413,7 +1413,7 @@ KGX,Nei,genus,included
 BUK,Species,NA,included
 FRI,Species,NA,included
 BLT,Species,NA,included
-FRZ,Species,NA,included
+FRZ,Nei,mixed species,included
 LTA,Species,NA,included
 BKJ,Species,NA,included
 KAW,Species,NA,included

@@ -86,16 +86,17 @@ ram_to_fao_species <- ram_temp1 %>%
   distinct(scientificname, SPECIES)
 
 
+# 59 species not identified via automatic name validation
 ram_final_check <- RAM_meta %>% 
   distinct(scientificname) %>% 
   left_join(ram_to_fao_species) %>% 
-  filter(is.na(SPECIES)) #%>% 
+  filter(is.na(SPECIES)) %>% 
   mutate(SPECIES = 
            case_when(
              scientificname == "Pleuronectes quadrituberculatus" ~ "ALP",
-             scientificname == "Pandalus eous" ~ "NA",
              scientificname == "Makaira mazara" ~ "BUM",
              
+             scientificname == "Pandalus eous" ~ "NA",
              scientificname == "Clupea bentincki" ~ "NA",
              scientificname == "Sebastes variabilis" ~ "NA",
              scientificname == "Sebastes norvegicus" ~ "NA",

@@ -214,7 +214,3 @@ ggsave(plot = figure_2, filename = "figures/figure_2.png", device = "png")
 
 
 
-
-
-
-

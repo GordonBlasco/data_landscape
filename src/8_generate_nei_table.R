@@ -11,6 +11,7 @@
 library(tidyverse)
 library(patchwork)
 library(viridis)
+library(viridisLite)
 library(ggpubr)
 
 source("~/github/aquaculture/src/directories.R") # Sets file directories 
@@ -35,6 +36,24 @@ fao_prep <- fao_production %>%
          SOURCE == 4) %>% 
   left_join(spp_info)
 
+totals_nei_prep <- fao_prep %>% 
+  summarize(
+    total_landed = sum(QUANTITY, na.rm = TRUE),
+    total_nei = sum(QUANTITY[id_level == "Nei"], na.rm = TRUE), 
+    total_spp = sum(QUANTITY[id_level == "Species"], na.rm = TRUE),
+  ) %>% 
+  ungroup() %>% 
+  mutate(prop_nei = total_nei/total_landed) %>% 
+  mutate(Major_Group = "Total_catch") #%>% 
+
+totals_nei <- totals_nei_prep %>% 
+  select(Major_Group, total_nei)
+
+totals_percent_nei <- totals_nei_prep %>% 
+  select(Major_Group, prop_nei) %>% 
+  rename(prop_nei_level = prop_nei) %>% 
+  mutate(nei_levels = "Percent NEI")
+
 
 prop_maj <- fao_prep %>% 
   group_by(Major_Group) %>% 
@@ -52,7 +71,20 @@ prop_nei_totals <- prop_maj %>%
 prop_maj_prep <- prop_maj %>% 
   select(Major_Group, prop_nei) %>% 
   rename(prop_nei_level = prop_nei) %>% 
-  mutate(nei_levels = "Total Catch")
+  mutate(nei_levels = "Percent NEI")
+
+
+totals_level <- fao_prep %>% 
+  filter(id_level == "Nei") %>% 
+  group_by(nei_levels) %>% 
+  summarise(
+    total_landed = sum(QUANTITY, na.rm = TRUE)
+  ) %>% 
+  ungroup() %>% 
+  mutate(Major_Group = "Total_catch") %>% 
+  left_join(totals_nei) %>% 
+  mutate(prop_nei_level = total_landed/total_nei) %>% 
+  bind_rows(totals_percent_nei)
 
 prop_level <- fao_prep %>% 
   filter(id_level == "Nei") %>% 
@@ -64,30 +96,46 @@ prop_level <- fao_prep %>%
   left_join(prop_nei_totals) %>% 
   mutate(prop_nei_level = total_landed/total_nei) %>% 
   bind_rows(prop_maj_prep) %>% 
+  bind_rows(totals_level) %>% 
  # add_row(
  #   Major_Group = "CRUSTACEA", 
  #   nei_levels = "blank"
  # ) %>% 
   mutate(nei_levels = factor(nei_levels, 
-                                levels = c("Total Catch",
+                                levels = c("Percent NEI",
                                           # "blank", 
+                                           "mixed species",
                                            "genus", 
                                            "family", 
                                            "order",
                                            "major group"
                                            ))) %>% 
-  mutate(percent = paste0(round(prop_nei_level*100), "%"))
+  mutate(percent = paste0(round(prop_nei_level*100), "%")) %>% 
+  filter((nei_levels == "Percent NEI" | percent != "0%")) %>% 
+  mutate(clean_majors = case_when(
+    Major_Group == "Total_catch" ~ "Total Landings", 
+    Major_Group == "AMPHIBIA, REPTILIA" ~ "Amphibia, Reptilia", 
+    Major_Group == "CRUSTACEA" ~ "Crustacea", 
+    Major_Group == "INVERTEBRATA AQUATICA" ~ "Invertebrata Aquatica", 
+    Major_Group == "MAMMALIA" ~ "Mammalia", 
+    Major_Group == "MOLLUSCA" ~ "Mollusca", 
+    Major_Group == "PISCES" ~ "Pisces", 
+    Major_Group == "PLANTAE AQUATICAE" ~ "Plantae Aquatica", 
+    
+  ))
 
 
-ggplot(prop_level, aes(x = nei_levels, y = Major_Group, fill = prop_nei_level)) +
+ggplot(prop_level, aes(x = nei_levels, y = clean_majors, fill = prop_nei_level)) +
   geom_tile(color = "black")+
   scale_fill_viridis(direction = 1,
-                     option = "heat")+
+                     option = "magma")+
   theme_classic() +
+  geom_hline(yintercept = 7.5, size = 2)+
+  geom_vline(xintercept = 1.5, size = 2)+
   scale_x_discrete(expand = c(0,0)) +
   scale_y_discrete(expand = c(0,0)) +
   labs(
-    title = "Major Group's NEI taxonomic resolution",
+    #title = "Major Group's NEI taxonomic resolution",
     y = "", 
     x = "NEI taxonomic resolution"
   ) +

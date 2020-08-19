@@ -13,6 +13,8 @@ library(stringr)
 ## Load raw data from fao
 ##################################################
 
+source("src/file_names.R") # Sets file directories 
+
 #source("~/github/aquaculture/src/directories.R") # Sets file directories 
 fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
 fao_country <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) # Species ref
@@ -39,7 +41,13 @@ species_level <- fao_species %>%
   filter(!(str_detect(Scientific_Name,"^\\w*dae\\b"))) %>%  # one word Ends with dae (removes family entries)
   filter(!(str_detect(Scientific_Name,"^Ex "))) %>% # 
   filter(!(SPECIES == "SKH" | SPECIES == "APL")) %>% # misc sharks and aquatic plants
-  mutate(id_level = "Species") # left over is a species
+  mutate(id_level = "Species") %>% # left over is a species
+  mutate(id_level = case_when(
+    SPECIES == "FRZ" ~ "Nei",
+    SPECIES == "HKC" ~ "Nei",
+    T ~ id_level
+  ))
+
 
 ## join back the species observations
 fao_species <- fao_species %>%  

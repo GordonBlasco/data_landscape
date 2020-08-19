@@ -102,7 +102,7 @@ db_tiles <- ggplot(tile_df, aes(x = database, y = SPECIES, fill = Major_Group2))
   scale_fill_manual(values = pal)+
   theme(legend.position = "none")+
   labs(
-    title = "A) Species presence in datasets",
+    #title = "A) Species presence in datasets",
     x = "",
     y = ""
    ) + 
@@ -123,7 +123,9 @@ db_tiles
 ## Database Tonnage Comparison
 ################################################################################
 fao_core <- fao_production %>% 
-  left_join(spp_info)
+  left_join(spp_info) %>% 
+  filter(YEAR == 2016) %>% 
+  filter(SOURCE == 4) 
 
 fao_tonnage <- fao_core %>% 
   filter(FAO == "yes") %>% 
@@ -163,8 +165,8 @@ blank_info <- tribble(
 
 
 tonnage_df <- fao_tonnage %>% 
-  bind_rows(iucn_tonnage,
-            ram_tonnage,
+  bind_rows(ram_tonnage,
+            iucn_tonnage,
             all_tonnage, 
             blank_info) %>% 
   mutate(Major_Group = factor(Major_Group, levels = c("NEI" ,
@@ -178,8 +180,8 @@ tonnage_df <- fao_tonnage %>%
   mutate(database = factor(database, levels = c("space",
                                                 "blank", 
                                                 "In All", 
-                                                "RAM", 
                                                 "IUCN", 
+                                                "RAM",
                                                 "FAO"))) %>% 
   mutate(text = case_when(
     database == "FAO" & Major_Group == "PISCES" ~ "FAO ",
@@ -207,7 +209,7 @@ db_ton <- ggplot(tonnage_df, aes(x = database, y = tonnage, fill = Major_Group))
   scale_fill_manual(values = pal2)+
  # scale_fill_brewer(palette = "Spectral") +
   #geom_text(data = biomass_plot_df, hjust = 1.02, size = 3.5, aes(x = database, y = 0, label = text)) +
-  ggtitle("B) Tonnage accounted by each database") +
+  #ggtitle("B) Tonnage accounted by each database") +
   theme_minimal() +
   theme(#legend.position = "none",
         panel.grid = element_blank(),
@@ -387,6 +389,17 @@ total_spp_iucn <- spp_info %>%
     in_iucn = n()
   )
 
+num_aqua_spp <- fao_production %>% 
+  filter(SOURCE !=4) %>% # all species that are farmed
+  distinct(SPECIES) %>% 
+  left_join(spp_info) %>% 
+  filter(id_level == "Species") %>% 
+  group_by(Major_Group) %>% 
+  summarise(
+    aq_prod = n()
+  )
+
+
 total_spp_in_all <- spp_info %>% 
   filter(!is.na(RAM)&
         !is.na(IUCN)) %>% 
@@ -403,16 +416,19 @@ final_table <- total_spp %>%
   left_join(total_spp_ram) %>% 
   left_join(total_spp_iucn) %>% 
   left_join(total_spp_in_all) %>% 
+  left_join(num_aqua_spp) %>% 
   mutate_if(is.integer, replace_na, 0) %>% 
   adorn_totals() %>% 
   arrange(total_spp) %>% 
   rename(
-    "Total Species"="total_spp",
-    "NEI Species Items"="nei_species_items",
-    "Specific Species"="specific_species",
-    "Covered in RAM"="in_ram",
-    "Covered in IUCN"="in_iucn",
-    "Covered in Both"="in_all"
+    "Major group"="Major_Group",
+    "Num. total taxa"="total_spp",
+    "Num. NEI"="nei_species_items",
+    "Num. resolved to species"="specific_species",
+    "Included in RAM"="in_ram",
+    "Included in IUCN"="in_iucn",
+    "Included in Both"="in_all",
+    "Aquaculture Produced"="aq_prod"
   )
 
 final_table
@@ -420,7 +436,7 @@ final_table
 layout <- c(
   patchwork::area(t = 1, l = 1, b = 6, r = 5), 
   patchwork::area(t = 1, l = 5, b = 6, r = 11),
-  patchwork::area(t = 7, l = 3, b = 9, r = 10)
+  patchwork::area(t = 7, l = 1, b = 9, r = 10)
 )
 plot(layout)
 
@@ -432,12 +448,14 @@ layout2 <- c(
 
 plot(layout2)
 
+Tmin <- ttheme_minimal()
 
 
 
 
 db_tiles + db_ton + gridExtra::tableGrob(final_table, rows = NULL, theme=Tmin) + 
-  plot_layout(design = layout)
+  plot_layout(design = layout)+ plot_annotation(tag_levels = 'A'#,  tag_suffix = ')'
+                                                )
 
 
 ##  supplement tables
@@ -494,6 +512,43 @@ neither_counts <- spp_info %>%
 
 
 
+#### AQUACULTURE ####
+#------------------------------------------------------------------------------#
+aq_core <- fao_production %>% 
+  left_join(spp_info) %>% 
+  #filter(YEAR == 2016) %>% 
+  filter(SOURCE != 4,
+         id_level == "Species")
+
+aq_tot_species <- aq_core %>% 
+  distinct(SPECIES, .keep_all = TRUE)
+
+aq_ram <- aq_tot_species %>% 
+  filter(RAM == "yes") %>% 
+  group_by(Major_Group) %>% 
+  summarise(
+    no_species = length(unique(SPECIES))
+  )
+
+aq_iucn <- aq_tot_species %>% 
+  filter(IUCN == "yes") %>% 
+  group_by(Major_Group) %>% 
+  summarise(
+    no_species = length(unique(SPECIES))
+  ) %>% 
+  adorn_totals()
 
 
+the_2016_tonnage <- fao_production %>% 
+  filter(SOURCE == 4,
+         YEAR == 2016) %>% 
+  summarise(tonnage = sum(QUANTITY, na.rm = TRUE))
+
+
+aq_tonnage <- fao_production %>% 
+  filter(SOURCE == 4,
+         YEAR == 2016) %>% 
+  filter(SPECIES %in% aq_tot_species$SPECIES) %>% 
+  summarise(tonnage = sum(QUANTITY, na.rm = TRUE))#%>% 
+  mutate(database = "IUCN")
 
