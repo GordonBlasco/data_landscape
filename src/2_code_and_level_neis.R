@@ -122,13 +122,26 @@ nei_levels <- nei_genus %>%
 nei_prep <- nei_levels %>% 
   select(SPECIES,nei_levels)
 
+unitless <- fao_production %>% 
+  filter(is.na(UNIT)) %>% 
+  distinct(SPECIES) %>% 
+  left_join(fao_species)
+
 nei_final <- fao_species %>% 
-  left_join(nei_prep) %>% 
+  left_join(nei_prep) %>%
   mutate(excluded = if_else(
     CPC_Class == "Coral and similar products, shells of molluscs, crustaceans or echinoderms and cuttle-bone; live aquatic plants and animals for ornamental purpose", 
     "excluded", "included"
   )) %>% 
-  select(SPECIES, id_level, nei_levels, excluded)
+  
+  mutate(excluded2 = case_when(
+    CPC_Class == "Coral and similar products, shells of molluscs, crustaceans or echinoderms and cuttle-bone; live aquatic plants and animals for ornamental purpose" ~"excluded",
+    SPECIES %in% unitless$SPECIES ~ "excluded",
+    Major_Group == "MAMMALIA" ~ "excluded",
+    T ~ "included")) #%>% 
+
+
+  select(SPECIES, id_level, nei_levels, excluded, excluded2)
 
 write_csv(nei_final, "data/nei_codes.csv")
 
