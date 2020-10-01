@@ -4,7 +4,7 @@ library(rfishbase)
 library(janitor)
 
 source("src/file_names.R") # Sets file directories 
-fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
+fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv")) # Raw fao data
 
 species_mask <- fao_production %>% 
   distinct(SPECIES) %>% 
@@ -13,7 +13,7 @@ species_mask <- fao_production %>%
 
 nei_levels <- read_csv("data/nei_codes.csv")
 
-fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
+fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
   rename(SPECIES = `3Alpha_Code`) %>% 
   filter(SPECIES %in% species_mask) %>% 
   left_join(., nei_levels)
@@ -28,7 +28,6 @@ val_fishbase <- read_csv("data/fao_species_fishbase_validated") %>%
 
 RAM_all <- load_ramlegacy()
 RAM_meta <- RAM_all[["metadata"]]
-
 
 ram_names <- RAM_meta %>% 
   distinct(scientificname) %>% 
@@ -90,7 +89,7 @@ ram_to_fao_species <- ram_temp1 %>%
 ram_final_check <- RAM_meta %>% 
   distinct(scientificname) %>% 
   left_join(ram_to_fao_species) %>% 
-  filter(is.na(SPECIES)) %>% 
+  filter(is.na(SPECIES)) #%>% 
   mutate(SPECIES = 
            case_when(
              scientificname == "Pleuronectes quadrituberculatus" ~ "ALP",
@@ -108,3 +107,43 @@ ram_final_check <- RAM_meta %>%
 
 
 #write_csv(ram_to_fao_species, "data/RAM_to_FAO.csv")
+  
+  
+  
+# supplement tables come after nei and farming code. run script #2
+
+fao_neis <- read_csv("data/nei_codes.csv")
+  
+farmed_spp_only_in_ram <- fao_production %>% 
+  distinct(SPECIES) %>% 
+  left_join(fao_species) %>% 
+  left_join(fao_neis) %>% 
+  filter(farmed_only == "yes") %>% 
+  left_join(ram_to_fao_species) %>% 
+  filter(!is.na(scientificname)) %>% 
+  select(scientificname)
+  
+  
+
+ram_taxon_info <- RAM_meta %>% 
+  distinct(scientificname, .keep_all = TRUE) 
+  
+ram_table_s2 <- ram_final_check %>% 
+  select(-SPECIES) %>% 
+  rbind(farmed_spp_only_in_ram) %>% 
+  left_join(ram_taxon_info) %>% 
+  select(
+    scientificname,
+    commonname,
+    FisheryType
+  ) %>% 
+  filter(!str_detect(scientificname, pattern = "spp$"))
+
+
+write_csv(ram_table_s2, "figures/table_S2.csv")
+
+tester3 <- RAM_meta%>% 
+  distinct(scientificname) %>% 
+  filter(str_detect(scientificname, pattern = "spp$"))
+
+

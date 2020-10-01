@@ -8,13 +8,13 @@ library(tidyverse)
 library(rredlist)
 library(furrr)
 
-apikey = Sys.getenv("IUCN_API_KEY")
+apikey = api_key
 
 source("src/file_names.R") # Sets file directories 
-fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
+fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv")) # Raw fao data
 nei_levels <- read_csv("data/nei_codes.csv")
 
-fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
+fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
   rename(SPECIES = `3Alpha_Code`) %>% 
   #filter(SPECIES %in% nei_levels$SPECIES) %>% 
   left_join(., nei_levels)
@@ -27,7 +27,7 @@ val_fishbase <- read_csv("data/fao_species_fishbase_validated")
 
 ################################
 
-fao_species_raw <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) %>% # Raw fao data
+fao_species_raw <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv")) %>% # Raw fao data
   distinct(SPECIES) %>% 
   left_join(fao_species) %>% 
   select(SPECIES, Scientific_Name)
@@ -36,6 +36,10 @@ fao_species_raw <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODU
 api_pull <- fao_species_raw %>% 
   mutate(info = map(Scientific_Name, rredlist::rl_search, key = apikey))
 
+help<- possibly(rl_search, "failed")
+
+api_pull <- fao_species_raw %>% 
+  mutate(info = map(Scientific_Name, help, key = apikey))
 
 api_clean <- api_pull %>% 
   mutate(category = map(info, pluck, "result", "category")) %>% 

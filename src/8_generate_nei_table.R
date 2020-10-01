@@ -16,13 +16,30 @@ library(ggpubr)
 
 source("~/github/aquaculture/src/directories.R") # Sets file directories 
 
-fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) 
-fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) 
-fao_neis       <- read_csv("data/nei_codes.csv")
+fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv"), 
+                           col_types = cols(COUNTRY = col_character())) # Raw fao data
+fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_COUNTRY_GROUPS.csv")) 
+
 # fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) 
-fao_species    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% 
+fao_species    <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_SPECIES_GROUPS.csv")) %>% 
   rename(SPECIES = "3Alpha_Code")
 
+
+
+fao_neis <- read_csv("data/nei_codes.csv") %>% 
+  filter(excluded == "included")
+
+excluded_spp <- fao_neis %>% 
+  pull(SPECIES)
+
+fao_production <- fao_production %>% 
+  filter(SPECIES %in% excluded_spp)
+
+
+years <- fao_production %>% 
+  filter(SOURCE == 4) %>% 
+  group_by(YEAR) %>% 
+  summarise(total = sum(QUANTITY))
 
 #### Prep the data ####
 #------------------------------------------------------------------------------#
@@ -32,7 +49,7 @@ spp_info <- fao_neis %>%
 
 
 fao_prep <- fao_production %>% 
-  filter(YEAR == 2016&
+  filter(YEAR == 2018&
          SOURCE == 4) %>% 
   left_join(spp_info)
 
@@ -125,13 +142,15 @@ prop_level <- fao_prep %>%
   ))
 
 
-ggplot(prop_level, aes(x = nei_levels, y = clean_majors, fill = prop_nei_level)) +
+fig_5_final <- ggplot(prop_level, aes(x = nei_levels, y = clean_majors, fill = prop_nei_level)) +
   geom_tile(color = "black")+
   scale_fill_viridis(direction = 1,
                      option = "magma")+
   theme_classic() +
-  geom_hline(yintercept = 7.5, size = 2)+
-  geom_vline(xintercept = 1.5, size = 2)+
+  geom_hline(yintercept = 5.5, size = 2.5)+
+  geom_vline(xintercept = 1.5, size = 2.5)+
+  geom_hline(yintercept = 5.5, size = .5, color = "white")+
+  geom_vline(xintercept = 1.5, size = .5, color = "white")+
   scale_x_discrete(expand = c(0,0)) +
   scale_y_discrete(expand = c(0,0)) +
   labs(
@@ -145,3 +164,9 @@ ggplot(prop_level, aes(x = nei_levels, y = clean_majors, fill = prop_nei_level))
 
   
 
+ggsave(plot = fig_5_final, 
+       device = "tiff",
+       filename = "figures/figure_5.tiff",
+       dpi = 300,
+       width = 7.5,
+       height = 6)

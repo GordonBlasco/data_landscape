@@ -9,13 +9,15 @@ library(tidyverse)
 library(broom)
 library(patchwork)
 library(ggpubr)
+library(jtools)
 library(rworldmap)
 source("~/github/aquaculture/src/directories.R") # Sets file directories 
 
-fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
-fao_species    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
+fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv"), 
+                           col_types = cols(COUNTRY = col_character())) # Raw fao data
+fao_species    <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
   rename(SPECIES = "3Alpha_Code")
-fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) # Species ref
+fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_COUNTRY_GROUPS.csv")) # Species ref
 fao_neis       <- read_csv("data/nei_codes.csv")
 
 freshwater <- fao_production %>% 
@@ -36,9 +38,24 @@ spp_info <- fao_production %>%
   left_join(fao_neis) %>% 
   mutate(is_freshwater = if_else(SPECIES %in% freshwater, "freshwater", "marine"))
 
+
+
 ####  section_name ####
 #------------------------------------------------------------------------------#
- 
+
+all_time <- fao_production %>% 
+  filter(SOURCE == 4) %>% 
+  left_join(spp_info) %>% 
+  filter(excluded == "included") %>% 
+  group_by(id_level,) %>% 
+  summarise(
+    total = sum(QUANTITY, na.rm = TRUE)
+  ) %>% 
+  ungroup() %>% 
+  pivot_wider(names_from = id_level, values_from = total) %>% 
+  mutate(total = Species + Nei, 
+         prop_nei = (Nei / total)) 
+
 over_time <- fao_production %>% 
   filter(SOURCE == 4) %>% 
   left_join(spp_info) %>% 
@@ -138,10 +155,11 @@ country_contrib <- fao_production %>%
     nei_total = sum(QUANTITY, na.rm = TRUE)
   ) %>% 
   mutate(percentage = nei_total / sum(nei_total)) %>% 
-  ungroup()
+  ungroup() %>% 
+  mutate(perc = percentage *100)
 
 country_order <- country_contrib %>% 
-  filter(YEAR == 2016) %>% 
+  filter(YEAR == 2018) %>% 
   arrange(-percentage) %>% 
   pull(region)
 country_contrib$region_new <- ordered(country_contrib$region, levels =country_order)
@@ -152,17 +170,18 @@ ggplot(country_contrib, aes(x=YEAR, y=percentage, fill=region_new)) +
 
 
 
-prop_plot <- ggplot(over_time, aes(x = YEAR, y = prop_nei))+
+prop_plot <- ggplot(over_time, aes(x = YEAR, y = prop_nei*100))+
   geom_point()+
   geom_line()+
   geom_smooth(method = "lm", color = "gray40")+
   labs(
     x = "Year", 
-    y = "Proportion NEI",
-    title = "A) Global Proportion of NEI Resolved Catch"
+    y = "Percent NEI"#,
+   # title = "A) Global Proportion of NEI Resolved Catch"
   )+
   ggpubr::theme_pubclean()+
   scale_x_continuous(expand = c(0,0))+
+  scale_y_continuous(limits = c(0,43))+
   theme(
     axis.title.x = element_blank(),
     text = element_text(family = 'serif'),
@@ -174,8 +193,8 @@ box_plot <- ggplot(by_country, aes(x = YEAR, y = prop_nei, group = YEAR))+
   ggpubr::theme_pubclean()+
   labs(
     x = "Year", 
-    y = "Proportion NEI",
-    title = "B) Median of NEI Resolved Catch for All Reporting Countries"
+    y = "Percent NEI"#,
+    #title = "B) Median of NEI Resolved Catch for All Reporting Countries"
   )+
   scale_x_continuous(expand = c(0,0))+
   theme(
@@ -184,33 +203,50 @@ box_plot <- ggplot(by_country, aes(x = YEAR, y = prop_nei, group = YEAR))+
     plot.title.position = "plot"
   )
 
-by_region <- ggplot(country_contrib, aes(x=YEAR, y=percentage, fill=region_new)) + 
+region_palette = (c("#F58F32", "#F5D751", "#F549AD", "#31CDF5", "#3E3DF5"))
+
+by_region <- ggplot(country_contrib, aes(x=YEAR, y=perc, fill=region_new)) + 
   geom_area(alpha=0.6 , size=1, colour="black")+
+  scale_fill_manual(values=region_palette)+
   ggpubr::theme_pubclean()+
   labs(
     x = "Year", 
-    y = "% NEI Contribution",
-    title = "C) Percent Contribution by Region"
+    y = "Percent NEI\nContribution"#,
+    #title = "C) Percent Contribution by Region"
   )+
   scale_x_continuous(expand = c(0,0))+
   theme(
     text = element_text(family = 'serif'),
     plot.title.position = "plot",
-    legend.title = element_blank()
+    legend.title = element_blank(),
+    legend.position = "bottom"
   )
 
 
-figure_2 <- prop_plot/box_plot/by_region &
+figure_3 <- prop_plot/box_plot/by_region &
   labs_pubr(base_size = 16)&
   theme(plot.title.position = "plot",
         legend.title = element_blank(),
         axis.title.y = element_text(size = 11),
-        axis.title.x = element_blank())
+        axis.title.x = element_blank())&
+  scale_x_continuous(breaks = c(1950, 
+                                1970,
+                                1990,
+                                2010),
+                     expand = c(0,0))
 
-figure_2
+fig_3_final <- figure_3 &
+  plot_annotation(tag_levels = "A")
 
-ggsave(plot = figure_2, filename = "figures/figure_2.png", device = "png")
+fig_3_final
+#ggsave(plot = figure_3, filename = "figures/figure_3.png", device = "png")
 
 
 
 
+ggsave(plot = fig_3_final, 
+       device = "tiff",
+       filename = "figures/figure_3.tiff",
+       dpi = 300,
+       width = 7.5,
+       height = 6)

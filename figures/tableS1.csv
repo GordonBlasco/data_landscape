@@ -1,0 +1,150 @@
+SPECIES,Scientific_Name,Name_En,Major_Group
+HKS,Merluccius bilinearis,Silver hake,PISCES
+RNG,Coryphaenoides rupestris,Roundnose grenadier,PISCES
+TRS,Salmo trutta,Sea trout,PISCES
+SOC,Oncorhynchus nerka,Sockeye(=Red) salmon,PISCES
+DEL,Dentex macrophthalmus,Large-eye dentex,PISCES
+WHG,Merlangius merlangus,Whiting,PISCES
+HKE,Merluccius merluccius,European hake,PISCES
+PIL,Sardina pilchardus,European pilchard(=Sardine),PISCES
+SPR,Sprattus sprattus,European sprat,PISCES
+COD,Gadus morhua,Atlantic cod,PISCES
+HAD,Melanogrammus aeglefinus,Haddock,PISCES
+ANE,Engraulis encrasicolus,European anchovy,PISCES
+PAC,Pagellus erythrinus,Common pandora,PISCES
+PAR,Pagellus bellottii,Red pandora,PISCES
+MON,Lophius piscatorius,Angler(=Monk),PISCES
+HER,Clupea harengus,Atlantic herring,PISCES
+DGS,Squalus acanthias,Picked dogfish,PISCES
+GAL,Galeoides decadactylus,Lesser African threadfin,PISCES
+NHA,Merluccius productus,North Pacific hake,PISCES
+HAL,Hippoglossus hippoglossus,Atlantic halibut,PISCES
+MLS,Tetrapturus audax,Striped marlin,PISCES
+RPG,Pagrus pagrus,Red porgy,PISCES
+SWO,Xiphias gladius,Swordfish,PISCES
+SBG,Sparus aurata,Gilthead seabream,PISCES
+CHO,Loligo reynaudii,Cape Hope squid,MOLLUSCA
+OCC,Octopus vulgaris,Common octopus,MOLLUSCA
+HOM,Trachurus trachurus,Atlantic horse mackerel,PISCES
+JAA,Trachurus picturatus,Blue jack mackerel,PISCES
+NEP,Nephrops norvegicus,Norway lobster,CRUSTACEA
+VMA,Scomber colias,Atlantic chub mackerel,PISCES
+SKJ,Katsuwonus pelamis,Skipjack tuna,PISCES
+BET,Thunnus obesus,Bigeye tuna,PISCES
+BLU,Pomatomus saltatrix,Bluefish,PISCES
+CBA,Rachycentron canadum,Cobia,PISCES
+BUM,Makaira nigricans,Blue marlin,PISCES
+YFT,Thunnus albacares,Yellowfin tuna,PISCES
+MHA,Brevoortia tyrannus,Atlantic menhaden,PISCES
+SAA,Sardinella aurita,Round sardinella,PISCES
+SMA,Isurus oxyrinchus,Shortfin mako,PISCES
+BSH,Prionace glauca,Blue shark,PISCES
+MHG,Brevoortia patronus,Gulf menhaden,PISCES
+SQI,Illex illecebrosus,Northern shortfin squid,MOLLUSCA
+LHT,Trichiurus lepturus,Largehead hairtail,PISCES
+ALB,Thunnus alalunga,Albacore,PISCES
+WHM,Tetrapturus albidus,Atlantic white marlin,PISCES
+HMM,Trachurus mediterraneus,Mediterranean horse mackerel,PISCES
+GRB,Brachydeuterus auritus,Bigeye grunt,PISCES
+SCP,Stenotomus chrysops,Scup,PISCES
+AMB,Seriola dumerili,Greater amberjack,PISCES
+NOP,Trisopterus esmarkii,Norway pout,PISCES
+JAN,Engraulis japonicus,Japanese anchovy,PISCES
+SBF,Thunnus maccoyii,Southern bluefin tuna,PISCES
+JJM,Trachurus japonicus,Japanese jack mackerel,PISCES
+MUF,Mugil cephalus,Flathead grey mullet,PISCES
+HKB,Merluccius polli,Benguela hake,PISCES
+PBF,Thunnus orientalis,Pacific bluefin tuna,PISCES
+HMZ,Trachurus trecae,Cunene horse mackerel,PISCES
+MAS,Scomber japonicus,Pacific chub mackerel,PISCES
+HMC,Trachurus capensis,Cape horse mackerel,PISCES
+MAC,Scomber scombrus,Atlantic mackerel,PISCES
+SQL,Loligo pealeii,Longfin squid,MOLLUSCA
+JAP,Sardinops melanostictus,Japanese pilchard,PISCES
+ANA,Engraulis anchoita,Argentine anchovy,PISCES
+CHP,Sardinops sagax,South American pilchard,PISCES
+BFT,Thunnus thynnus,Atlantic bluefin tuna,PISCES
+SQJ,Todarodes pacificus,Japanese flying squid,MOLLUSCA
+MAA,Scomber australasicus,Blue mackerel,PISCES
+GSU,Pagrus auratus,Silver seabream,PISCES
+ELS,Conger myriaster,Whitespotted conger,PISCES
+LJN,Lutjanus analis,Mutton snapper,PISCES
+KGM,Scomberomorus cavalla,King mackerel,PISCES
+GUQ,Centrophorus squamosus,Leafscale gulper shark,PISCES
+SCK,Dalatias licha,Kitefin shark,PISCES
+LTJ,Lutjanus vivanus,Silk snapper,PISCES
+PSE,Pseudotolithus elongatus,Bobo croaker,PISCES
+CCL,Carcharhinus limbatus,Blacktip shark,PISCES
+PLE,Pleuronectes platessa,European plaice,PISCES
+BSS,Dicentrarchus labrax,European seabass,PISCES
+DAB,Limanda limanda,Common dab,PISCES
+FLE,Platichthys flesus,European flounder,PISCES
+HKK,Merluccius capensis,Shallow-water Cape hake,PISCES
+CCP,Carcharhinus plumbeus,Sandbar shark,PISCES
+POL,Pollachius pollachius,Pollack,PISCES
+CCN,Carcharhinus acronotus,Blacknose shark,PISCES
+DUS,Carcharhinus obscurus,Dusky shark,PISCES
+FLS,Paralichthys dentatus,Summer flounder,PISCES
+EEL,Epinephelus flavolimbatus,Yellowedge grouper,PISCES
+GPR,Epinephelus morio,Red grouper,PISCES
+STB,Morone saxatilis,Striped bass,PISCES
+PWQ,Platichthys stellatus,Starry flounder,PISCES
+EOJ,Eopsetta jordani,Petrale sole,PISCES
+BSB,Centropristis striata,Black seabass,PISCES
+MKM,Mycteroperca microlepis,Gag,PISCES
+EUL,Thaleichthys pacificus,Eulachon,PISCES
+EFV,Epinephelus niveatus,Snowy grouper,PISCES
+RHT,Rhizoprionodon terraenovae,Atlantic sharpnose shark,PISCES
+SPL,Sphyrna lewini,Scalloped hammerhead,PISCES
+CCO,Carcharhinus isodon,Finetooth shark,PISCES
+SPJ,Sphyrna tiburo,Bonnethead,PISCES
+JRI,Raja binoculata,Big skate,PISCES
+RJD,Raja erinacea,Little skate,PISCES
+BOA,Ethmalosa fimbriata,Bonga shad,PISCES
+POR,Lamna nasus,Porbeagle,PISCES
+SLS,Palinurus gilchristi,Southern spiny lobster,CRUSTACEA
+LBC,Jasus lalandii,Cape rock lobster,CRUSTACEA
+CTI,Mustelus canis,Dusky smooth-hound,PISCES
+SBR,Pagellus bogaraveo,Blackspot(=red) seabream,PISCES
+LBA,Homarus americanus,American lobster,CRUSTACEA
+GAG,Galeorhinus galeus,Tope shark,PISCES
+HMY,Caranx rhonchus,False scad,PISCES
+RJC,Raja clavata,Thornback ray,PISCES
+EPI,Epigonus telescopus,Black cardinal fish,PISCES
+BSK,Cetorhinus maximus,Basking shark,PISCES
+REB,Sebastes mentella,Beaked redfish,PISCES
+MUT,Mullus barbatus,Red mullet,PISCES
+TRZ,Pseudocaranx dentex,White trevally,PISCES
+BOC,Capros aper,Boarfish,PISCES
+SJU,Sebastolobus alascanus,Shortspine thornyhead,PISCES
+TRG,Balistes carolinensis,Grey triggerfish,PISCES
+SNR,Lutjanus campechanus,Northern red snapper,PISCES
+AGN,Squatina squatina,Angelshark,PISCES
+SHO,Galeus melastomus,Blackmouth catshark,PISCES
+MUR,Mullus surmuletus,Surmullet,PISCES
+SPC,Spicara smaris,Picarel,PISCES
+GUR,Aspitrigla cuculus,Red gurnard,PISCES
+BSF,Aphanopus carbo,Black scabbardfish,PISCES
+FAS,Sprattus fuegensis,Falkland sprat,PISCES
+BYS,Beryx splendens,Splendid alfonsino,PISCES
+RJR,Raja radiata,Starry ray,PISCES
+SYC,Scyliorhinus canicula,Small-spotted catshark,PISCES
+RJM,Raja montagui,Spotted ray,PISCES
+RJH,Raja brachyura,Blonde ray,PISCES
+RJI,Raja circularis,Sandy ray,PISCES
+RJF,Raja fullonica,Shagreen ray,PISCES
+RJE,Raja microocellata,Small-eyed ray,PISCES
+RJN,Raja naevus,Cuckoo ray,PISCES
+RJU,Raja undulata,Undulate ray,PISCES
+TIL,Lopholatilus chamaeleonticeps,Great Northern tilefish,PISCES
+DPV,Zearaja chilensis,Yellownose skate,PISCES
+MAB,Mycteroperca bonaci,Black grouper,PISCES
+CKI,Strangomera bentincki,Araucanian herring,PISCES
+VET,Engraulis ringens,Anchoveta(=Peruvian anchovy),PISCES
+RRH,Etrumeus teres,Red-eye round herring,PISCES
+SSM,Scomberomorus maculatus,Atlantic Spanish mackerel,PISCES
+RPU,Rhomboplites aurorubens,Vermilion snapper,PISCES
+LOR,Jasus edwardsii,Red rock lobster,CRUSTACEA
+MEC,Metanephrops challengeri,New Zealand lobster,CRUSTACEA
+STG,Cynoscion regalis,Squeteague(=Gray weakfish),PISCES
+CKA,Micropogonias undulatus,Atlantic croaker,PISCES

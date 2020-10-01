@@ -16,8 +16,8 @@ library(stringr)
 source("src/file_names.R") # Sets file directories 
 
 #source("~/github/aquaculture/src/directories.R") # Sets file directories 
-fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) # Raw fao data
-fao_country <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) # Species ref
+fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv")) # Raw fao data
+fao_country <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_COUNTRY_GROUPS.csv")) # Species ref
 
 ## make vector of all species code listed in the FAO production table
 fao_species_vec <- fao_production %>% 
@@ -25,7 +25,7 @@ fao_species_vec <- fao_production %>%
   pull(SPECIES)
 
 ## filter the FAO species metadata for those that actually appear in the landings data
-fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
+fao_species <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
   rename(SPECIES = `3Alpha_Code`) %>% 
   filter(SPECIES %in% fao_species_vec) 
 
@@ -74,6 +74,19 @@ tax <- fao_species %>%
   # filter(tax_id == nei_levels)
   # filter(is.na(tax_id))
 
+#### is in aquaculture? ####
+#------------------------------------------------------------------------------#
+
+aq_species <- fao_production %>% 
+  filter(SOURCE != 4) %>% 
+  distinct(SPECIES) %>% 
+  mutate(farmed = "yes")
+
+
+wc_species <- fao_production %>% 
+  filter(SOURCE == 4) %>% 
+  distinct(SPECIES) %>% 
+  mutate(wild_caught = "yes")
 
 
 
@@ -128,20 +141,66 @@ unitless <- fao_production %>%
   left_join(fao_species)
 
 nei_final <- fao_species %>% 
-  left_join(nei_prep) %>%
-  mutate(excluded = if_else(
-    CPC_Class == "Coral and similar products, shells of molluscs, crustaceans or echinoderms and cuttle-bone; live aquatic plants and animals for ornamental purpose", 
-    "excluded", "included"
-  )) %>% 
-  
-  mutate(excluded2 = case_when(
+  left_join(nei_prep) %>% 
+  mutate(excluded = case_when(
     CPC_Class == "Coral and similar products, shells of molluscs, crustaceans or echinoderms and cuttle-bone; live aquatic plants and animals for ornamental purpose" ~"excluded",
     SPECIES %in% unitless$SPECIES ~ "excluded",
     Major_Group == "MAMMALIA" ~ "excluded",
-    T ~ "included")) #%>% 
+    Major_Group == "AMPHIBIA, REPTILIA" ~ "excluded",
+    T ~ "included")) %>% 
+  select(SPECIES, id_level, nei_levels, excluded)
 
 
-  select(SPECIES, id_level, nei_levels, excluded, excluded2)
 
-write_csv(nei_final, "data/nei_codes.csv")
+add_aq <- nei_final %>% 
+  left_join(aq_species) %>% 
+  left_join(wc_species) %>% 
+  mutate(farmed_only = if_else(
+    farmed== "yes" & is.na(wild_caught), "yes", NA_character_
+  ))
+
+#write_csv(add_aq, "data/nei_codes.csv")
+
+
+
+test <- add_aq %>% #200
+  filter(excluded == "included"&
+           id_level == "Species") %>% 
+  filter(farmed== "yes" &
+           is.na(wild_caught))
+
+test <- add_aq %>% #611 - 465 explicit species
+  filter(excluded == "included"&
+           id_level == "Species") %>% 
+  filter(farmed== "yes")
+
+
+test <- add_aq %>% #411
+  filter(excluded == "included"&
+           id_level == "Species") %>% 
+  filter(farmed== "yes"&
+           wild_caught=="yes") 
+
+
+
+ram_codes <- read_csv("data/RAM_to_FAO.csv") %>% 
+  distinct(SPECIES) %>% 
+  mutate(RAM = "yes")
+
+#ram data
+iucn_codes <- read_csv("data/IUCN_to_FAO.csv") %>% 
+  distinct(SPECIES) %>% 
+  mutate(IUCN = "yes")
+
+## Clean and prep data
+################################################################################
+
+spp_info <- add_aq %>%
+  left_join(ram_codes) %>% 
+  left_join(iucn_codes) %>% 
+  mutate(FAO = "yes") %>% 
+  left_join(fao_species) %>% 
+  filter(RAM == "yes",
+         farmed_only == "yes")
+
 

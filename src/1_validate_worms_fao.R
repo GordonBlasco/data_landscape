@@ -15,12 +15,12 @@ taxize_sources <- c(worms = 9,
 source("src/file_names.R") # Sets file directories 
 apikey = "PASTE_KEY_HERE"
 
-fao_spp <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) %>% # Raw fao data
+fao_spp <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv")) %>% # Raw fao data
   distinct(SPECIES) %>% 
   pull(SPECIES)
 
 # 2. Prepare data
-msy_spp <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
+msy_spp <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_SPECIES_GROUPS.csv")) %>% # Species ref
   rename(alpha_code = `3Alpha_Code`) %>% 
   filter(alpha_code %in% fao_spp) %>% 
   select(alpha_code, Scientific_Name) %>% 

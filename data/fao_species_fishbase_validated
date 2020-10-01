@@ -153,6 +153,8 @@ SHN,Schroederichthys tenuis,Schroederichthys tenuis
 ASY,Asymbolus analis,Asymbolus analis
 ASV,Asymbolus vincenti,Asymbolus vincenti
 AXM,Asymbolus spp,Asymbolus spp
+BZO,Bythaelurus bachi,Bythaelurus bachi
+BZL,Bythaelurus tenuicephalus,Bythaelurus tenuicephalus
 ATM,Atelomycterus macleayi,Atelomycterus macleayi
 ATY,Atelomycterus marmoratus,Atelomycterus marmoratus
 HPE,Haploblepharus edwardsii,Haploblepharus edwardsii
@@ -341,6 +343,7 @@ CVX,Carcharhiniformes,Carcharhiniformes
 GSK,Somniosus microcephalus,Somniosus microcephalus
 SOR,Somniosus rostratus,Somniosus rostratus
 SON,Somniosus pacificus,Somniosus pacificus
+RZZ,Somniosus antarcticus,Somniosus antarcticus
 CHZ,Cirrhigaleus asper,Cirrhigaleus asper
 CHF,Cirrhigaleus barbifer,Cirrhigaleus barbifer
 EUZ,Euprotomicroides zantedeschia,Euprotomicroides zantedeschia
@@ -387,6 +390,8 @@ ETV,Etmopterus villosus,Etmopterus villosus
 ETW,Etmopterus virens,Etmopterus virens
 ETE,Etmopterus compagnoi,Etmopterus compagnoi
 ETO,Etmopterus decacuspidatus,Etmopterus decacuspidatus
+EZU,Etmopterus alphus,Etmopterus alphus
+EZT,Etmopterus viator,Etmopterus viator
 SHL,Etmopterus spp,Etmopterus spp
 ISB,Isistius brasiliensis,Isistius brasiliensis
 ISP,Isistius plutodus,Isistius plutodus
@@ -905,6 +910,9 @@ CMW,Chimaera owstoni,Chimaera owstoni
 CMU,Chimaera cubana,Chimaera cubana
 DDR,Chimaera notafricana,Chimaera notafricana
 WCH,Chimaera opalescens,Chimaera opalescens
+ZZC,Chimaera buccanigella,Chimaera buccanigella
+ZZD,Chimaera didierae,Chimaera didierae
+ZZE,Chimaera willwatchi,Chimaera willwatchi
 CWM,Chimaera spp,Chimaera spp
 RAT,Hydrolagus colliei,Hydrolagus colliei
 CYA,Hydrolagus affinis,Hydrolagus affinis
@@ -2867,6 +2875,7 @@ BTT,Batasio batasio,Batasio batasio
 BTR,Bathybagrus tetranema,Bathybagrus tetranema
 BCA,Chandramara chandramara,Chandramara chandramara
 CGW,Coreobagrus ichikawai,Coreobagrus ichikawai
+BXW,Coreobagrus brevicorpus,Coreobagrus brevicorpus
 BGC,Gephyroglanis congicus,Gephyroglanis congicus
 BGH,Bagrichthys hypselopterus,Bagrichthys hypselopterus
 BGM,Bagrichthys macropterus,Bagrichthys macropterus
@@ -2924,10 +2933,12 @@ CAN,Bagrus spp,Bagrus spp
 BHE,Rheoglanis dendrophorus,Chrysichthys dendrophorus
 BPU,Pseudobagrus aurantiacus,Pseudobagrus aurantiacus
 WPB,Pseudobagrus vachellii,Pseudobagrus vachellii
+WGK,Pseudobagrus koreanus,Pseudobagrus koreanus
 BPD,Platyglanis depierrei,Notoglanidium depierrei
 PLU,Phyllonemus typus,Phyllonemus typus
 YCH,Pelteobagrus fulvidraco,Tachysurus fulvidraco
 YZI,Pelteobagrus ussuriensis,Pelteobagrus ussuriensis
+BVF,Bagridae,Bagridae
 ICB,Ictalurus balsanus,Ictalurus balsanus
 ITP,Ictalurus punctatus,Ictalurus punctatus
 ICU,Ictalurus australis,Ictalurus australis
@@ -3039,6 +3050,7 @@ HEL,Heterobranchus longifilis,Heterobranchus longifilis
 WIX,Heterobranchus spp,Heterobranchus spp
 LLM,Clariallabes attemsi,Clariallabes attemsi
 UGZ,Uegitglanis zammaranoi,Uegitglanis zammaranoi
+XHC,H. longifilis x C. gariepinus,H. longifilis x C. gariepinus
 OYB,Olyra burmanica,Olyra burmanica
 MPC,Malapterurus electricus,Malapterurus electricus
 MPI,Malapterurus microstoma,Malapterurus microstoma
@@ -3470,6 +3482,7 @@ AOD,Dalophis obtusirostris,Dalophis obtusirostris
 NVD,Dalophis boulengeri,Dalophis boulengeri
 NVF,Dalophis cephalopeltis,Dalophis cephalopeltis
 NVG,Dalophis multidentatus,Dalophis multidentatus
+AWW,Dalophis imberbis,Dalophis imberbis
 OPS,Pseudomyrophis atlanticus,Pseudomyrophis atlanticus
 AOJ,Cirricaecula johnsoni,Cirricaecula johnsoni
 AOL,Caralophia loxochila,Caralophia loxochila
@@ -3667,6 +3680,7 @@ USK,Brosme brosme,Brosme brosme
 COD,Gadus morhua,Gadus morhua
 PCO,Gadus macrocephalus,Gadus macrocephalus
 GRC,Gadus ogac,Gadus macrocephalus
+ALK,Gadus chalcogrammus,Gadus chalcogrammus
 CDZ,Gadus spp,Gadus spp
 FBU,Lota lota,Lota lota
 LIN,Molva molva,Molva molva
@@ -3693,7 +3707,6 @@ MGX,Microgadus proximus,Microgadus proximus
 TOM,Microgadus tomcod,Microgadus tomcod
 POK,Pollachius virens,Pollachius virens
 POL,Pollachius pollachius,Pollachius pollachius
-ALK,Theragra chalcogramma,Gadus chalcogrammus
 TEF,Theragra finnmarchica,Theragra finnmarchica
 POC,Boreogadus saida,Boreogadus saida
 ATG,Arctogadus glacialis,Arctogadus glacialis
@@ -4263,7 +4276,7 @@ AKA,Anomalops katoptron,Anomalops katoptron
 KYA,Kryptophanaron alfredi,Kryptophanaron alfredi
 PBZ,Photoblepharon steinitzi,Photoblepharon steinitzi
 PVY,Phthanophaneron harveyi,Phthanophaneron harveyi
-HOO,Holocentrus ascensionis,Holocentrus adscensionis
+HOO,Holocentrus adscensionis,Holocentrus adscensionis
 MJA,Myripristis jacobus,Myripristis jacobus
 HMJ,Myripristis murdjan,Myripristis murdjan
 YJW,Myripristis berndti,Myripristis berndti
@@ -4619,6 +4632,7 @@ EWZ,Epinephelus chabaudi,Epinephelus chabaudi
 EZN,Epinephelus niphobles,Hyporthodus niphobles
 EZQ,Epinephelus quinquefasciatus,Epinephelus quinquefasciatus
 GPX,Epinephelus spp,Epinephelus spp
+EXF,E. fuscoguttatus x E. lanceolatus,E. fuscoguttatus x E. lanceolatus
 CBR,Serranus cabrilla,Serranus cabrilla
 SRK,Serranus scriba,Serranus scriba
 SRJ,Serranus hepatus,Serranus hepatus
@@ -4724,6 +4738,8 @@ PXF,Paralabrax maculatofasciatus,Paralabrax maculatofasciatus
 PXK,Paralabrax clathratus,Paralabrax clathratus
 PXM,Paralabrax albomaculatus,Paralabrax albomaculatus
 BAP,Paralabrax humeralis,Paralabrax humeralis
+PZZ,Paralabrax callaensis,Paralabrax callaensis
+LXW,Paralabrax loro,Paralabrax loro
 XBX,Paralabrax spp,Paralabrax spp
 EDG,Pseudogramma gregoryi,Pseudogramma gregoryi
 NCA,Plectranthias altipinnatus,Plectranthias altipinnatus
@@ -5008,7 +5024,6 @@ CVJ,Caranx hippos,Caranx hippos
 CXR,Caranx ruber,Caranx ruber
 VNT,Caranx vinctus,Caranx vinctus
 HMY,Caranx rhonchus,Caranx rhonchus
-NBR,Caranx bartholomaei,Carangoides bartholomaei
 WFF,Caranx fischeri,Caranx fischeri
 TRE,Caranx spp,Caranx spp
 MOA,Selene setapinnis,Selene setapinnis
@@ -5083,6 +5098,7 @@ NGN,Carangoides otrynter,Carangoides otrynter
 GSP,Carangoides plagiotaenia,Carangoides plagiotaenia
 GSA,Carangoides praeustus,Carangoides praeustus
 GST,Carangoides talamparoides,Carangoides talamparoides
+NBR,Carangoides bartholomaei,Carangoides bartholomaei
 NGX,Carangoides spp,Carangoides spp
 RRU,Elagatis bipinnulata,Elagatis bipinnulata
 GLT,Gnathanodon speciosus,Gnathanodon speciosus
@@ -5383,6 +5399,7 @@ OVM,Corvula macrops,Corvula macrops
 TEG,Ctenosciaena gracilicirrhus,Ctenosciaena gracilicirrhus
 WEM,Totoaba macdonaldi,Totoaba macdonaldi
 CBM,Sciaena umbra,Sciaena umbra
+AXW,Sciaena deliciosa,Sciaena deliciosa
 IAY,Sciaena bathytatos,Protosciaena bathytatos
 DRU,Sciaena spp,Sciaena spp
 AGR,Aplodinotus grunniens,Aplodinotus grunniens
@@ -6403,6 +6420,7 @@ RSY,Sparisoma chrysopterum,Sparisoma chrysopterum
 PRR,Sparisoma cretense,Sparisoma cretense
 QZV,Sparisoma rubripinne,Sparisoma rubripinne
 QHI,Sparisoma atomarium,Sparisoma atomarium
+QRV,Sparisoma viride,Sparisoma viride
 USU,Scarus coeruleus,Scarus coeruleus
 UVT,Scarus vetula,Scarus vetula
 USF,Scarus forsteni,Scarus forsteni
@@ -8497,6 +8515,7 @@ OAU,Aracana aurita,Aracana aurita
 NPM,Anoplocapros amygdaloides,Anoplocapros amygdaloides
 LFT,Lactophrys trigonus,Lactophrys trigonus
 LFQ,Lactophrys triqueter,Lactophrys triqueter
+KBC,Lactophrys bicaudalis,Lactophrys bicaudalis
 OAR,Caprichthys gymnura,Caprichthys gymnura
 YGU,Capropygia unistriata,Capropygia unistriata
 KEA,Kentrocapros aculeatus,Kentrocapros aculeatus
@@ -9894,6 +9913,7 @@ TEV,Stenocionops ovata,Stenocionops ovatus
 SCR,Maja squinado,Maja squinado
 JCP,Maja crispata,Maja crispata
 JCG,Maja goltziana,Maja goltziana
+JDV,Maja brachydactyla,Maja brachydactyla
 JCX,Maja spp,Maja spp
 MJP,Maiopsis panamensis,Maiopsis panamensis
 ZYA,Schizophrys aspera,Schizophrys aspera
@@ -11700,6 +11720,7 @@ TSW,Mesoplodon layardii,Mesoplodon layardii
 BDW,Mesoplodon bowdoini,Mesoplodon bowdoini
 BJW,Mesoplodon stejnegeri,Mesoplodon stejnegeri
 BXT,Mesoplodon traversii,Mesoplodon traversii
+BZZ,Mesoplodon hotaura,Mesoplodon hotaura
 MEP,Mesoplodon spp,Mesoplodon spp
 BOW,Hyperoodon ampullatus,Hyperoodon ampullatus
 SRW,Hyperoodon planifrons,Hyperoodon planifrons
@@ -11722,6 +11743,8 @@ TUC,Sotalia fluviatilis,Sotalia fluviatilis
 TZG,Sotalia guianensis,Sotalia guianensis
 DHA,Sousa teuszii,Sousa teuszii
 DHI,Sousa chinensis,Sousa chinensis
+QPU,Sousa plumbea,Sousa chinensis
+QPV,Sousa sahulensis,Sousa sahulensis
 RTD,Steno bredanensis,Steno bredanensis
 KIW,Orcinus orca,Orcinus orca
 RNW,Lissodelphis borealis,Lissodelphis borealis
@@ -12031,6 +12054,7 @@ TVH,Ardea cinerea,Ardea cinerea
 HFZ,Podiceps auritus,Podiceps auritus
 HHZ,Podiceps cristatus,Podiceps cristatus
 HVE,Podiceps grisegena,Podiceps grisegena
+TWH,Pelecanus thagus,Pelecanus thagus
 XEF,Xenophyophora,Xenophyophora
 AVJ,Arachnopusia inchoata,Arachnopusia inchoata
 MVK,Malakosaria sinclairii,Malakosaria sinclairii

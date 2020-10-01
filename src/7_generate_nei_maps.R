@@ -19,16 +19,26 @@ library(janitor)
 source("~/github/aquaculture/src/directories.R") # Sets file directories 
 
 # load in FAO data
-fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/TS_FI_PRODUCTION.csv")) 
-fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) 
-fao_neis       <- read_csv("data/nei_codes.csv")
-fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_COUNTRY_GROUPS.csv")) 
-fao_species    <- read_csv(file.path(dir_raw_data, "/FAO/production/CL_FI_SPECIES_GROUPS.csv")) %>% 
+fao_production <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/TS_FI_PRODUCTION.csv"), 
+                           col_types = cols(COUNTRY = col_character())) # Raw fao data
+fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_COUNTRY_GROUPS.csv")) 
+fao_country    <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_COUNTRY_GROUPS.csv")) 
+fao_species    <- read_csv(file.path(dir_raw_data, "/FAO/production/2020_1.0/CL_FI_SPECIES_GROUPS.csv")) %>% 
                   rename(SPECIES = "3Alpha_Code")
 
 
 # categorize freshwater species based on if they have "freshwater" in their
 # cpc_class, isscaap_group, or in their name (freshwater nei's)
+
+fao_neis <- read_csv("data/nei_codes.csv") %>% 
+  filter(excluded == "included")
+
+excluded_spp <- fao_neis %>% 
+  pull(SPECIES)
+
+fao_production <- fao_production %>% 
+  filter(SPECIES %in% excluded_spp)
+
 
 spp_info <- fao_neis %>% 
   left_join(fao_species) %>% 
@@ -52,7 +62,7 @@ country_prep <- fao_country %>%
 national_fresh <- fao_production %>% 
   left_join(spp_info) %>% 
   filter(habitat == "Freshwater" &
-         YEAR == 2016 &
+         YEAR == 2018 &
          SOURCE == 4) %>% 
   group_by(COUNTRY) %>% 
   summarise(
@@ -68,7 +78,7 @@ national_fresh <- fao_production %>%
 national_marine <- fao_production %>% 
   left_join(spp_info) %>% 
   filter(habitat == "Marine" &
-           YEAR == 2016 &
+           YEAR == 2018 &
            SOURCE == 4) %>% 
   group_by(COUNTRY) %>% 
   summarise(
@@ -94,7 +104,8 @@ world_df <- st_set_geometry(world_raw, NULL) %>% # remove geometry
 # make fresh and marine maps 
 map_freshwater <- world_raw %>% 
   filter(poly_type == "GADM") %>% 
-  left_join(national_fresh) #%>% 
+  left_join(national_fresh) # %>% 
+  #filter(ISO3 %in% c("USA", "ATA", "ARC", "AUS"))#%>% 
   #mutate_if(is.numeric, replace_na, 0)
 
 test_1 <- st_set_geometry(map_freshwater, NULL)
@@ -106,7 +117,8 @@ map_marine <- world_raw %>%
   mutate(total_landed = case_when(
     poly_type == "GADM" ~ NA_real_, 
     TRUE ~ total_landed
-  ))
+  )) #%>% 
+  #filter(ISO3 %in% c("USA", "ATA", "ARC", "AUS"))
 
 test_2 <- st_set_geometry(map_marine, NULL)
 
@@ -118,22 +130,27 @@ test_2 <- st_set_geometry(map_marine, NULL)
 
 # nei tonnage plot
 fresh_plot <- ggplot(map_freshwater, aes(fill = log(total_landed+1)))+
-  geom_sf(size = .1) #+
-  #labs( title = "Freshwater NEI landings in 2016")
+  geom_sf(size = .1) +
+  theme_bw() +
+  theme(axis.ticks = element_line(colour = "white"),
+        axis.text = element_text(color = "white"))
 
 
 marine_plot <- ggplot(map_marine, aes(fill = log(total_landed+1)))+
-  geom_sf(size = .1) #+
-  #labs(title = "Marine NEI landings in 2016")
+  geom_sf(size = .1) +
+  theme_bw() +
+  theme(axis.ticks = element_line(colour = "white"),
+        axis.text = element_text(color = "white"))
 
 # prop NEI plots
 fresh_prop_plot <- ggplot(map_freshwater, aes(fill = prop_nei))+
   geom_sf(size = .1) +
-  labs( title = "Freshwater NEI landings in 2016")
+  labs( title = "Freshwater NEI landings in 2018")
 
 marine_prop_plot <- ggplot(map_marine, aes(fill = prop_nei))+
   geom_sf(size = .1) +
-  labs(title = "Marine NEI landings in 2016")
+  labs(title = "Marine NEI landings in 2018")+
+  
 
 
 patches_prop <- (fresh_prop_plot  + plot_layout(guides = 'keep')) +
@@ -145,18 +162,26 @@ patches <- (fresh_plot  + plot_layout(guides = 'keep')) +
             marine_plot + plot_layout(guides = 'collect')
 
 patches <- patches & 
-  theme_bw() &
+  #theme_bw() &
   scale_fill_viridis(direction = 1, limits = c(0, 16.5), option = "magma") &
   scale_y_continuous(expand = c(0,0)) &
   scale_x_continuous(expand = c(0,0)) &
-  guides(fill = guide_legend(title = "Nei Biomass Tonnes (log scale)"#, 
+  #theme(axis.ticks = element_line(colour = "white"),
+  #      axis.text = element_text(color = "white"))&
+  guides(fill = guide_legend(title = "NEI Production\n(log tonnes)",
+                             title.hjust = 0.5
                              #title.position = "top", 
                              #title.hjust = 0.5)
-  )) &
-  theme(legend.title.align = 0.5,
-        legend.direction = "horizontal",
-        legend.position = 'bottom',
-        legend.box.just = "center")
+  )) #&
+  #theme(#
+        #legend.title = element_text(hjust = 0.5),
+        #legend.title.align = 0.5
+        #legend.direction = "horizontal",
+        #legend.position = 'bottom',
+        #legend.box.just = "center"
+        #)
+#patches
+
 
 final_plot <- patches + plot_layout(guides = 'collect')#, ncol = 3#, 
 #widths = c(5, 1, 5)#,
@@ -166,11 +191,11 @@ final_plot <- patches + plot_layout(guides = 'collect')#, ncol = 3#,
 
 
 
-ggsave(final_plot, "figures/figure_3.png", 
-       width = 11, 
-       height = 8, 
-       device = "png", 
-       units = "in")
+#ggsave(final_plot, "figures/figure_4.png", 
+#       width = 11, 
+#       height = 8, 
+#       device = "png", 
+#       units = "in")
 
 
 #### fresh and marine regression ####
@@ -292,7 +317,7 @@ india_check <- fao_production %>%
   left_join(spp_info) %>% 
   filter(excluded == "included",
          COUNTRY == 356,
-         YEAR == 2016, 
+         YEAR == 2018, 
          habitat == "Freshwater") #%>%
 
 
@@ -311,7 +336,7 @@ india_check <- fao_production %>%
   left_join(spp_info) %>% 
   filter(excluded == "included",
          #COUNTRY == 356,
-         YEAR == 2016,
+         YEAR == 2018,
          !is.na(habitat)) %>%
   group_by(id_level, source, habitat) %>% 
   summarise(tonnage = sum(QUANTITY, na.rm = TRUE))
@@ -322,7 +347,7 @@ nei_aqua <- fao_production %>%
   filter(SOURCE != 4) %>% 
   left_join(spp_info) %>% 
   filter(excluded ==  "included", 
-         YEAR == 2016) %>% 
+         YEAR == 2018) %>% 
   group_by(COUNTRY, id_level) %>% 
   summarise(
     tonnage = sum(QUANTITY, na.rm = TRUE)
@@ -371,7 +396,7 @@ nei_aquaculture_compared <- fao_production %>%
   mutate(source = if_else(SOURCE == 4, "wild_capture", "aquaculture")) %>% 
   left_join(spp_info) %>% 
   filter(excluded ==  "included", 
-         YEAR == 2016) %>% 
+         YEAR == 2018) %>% 
   group_by(id_level, source) %>% 
   summarise(
     tonnage = sum(QUANTITY, na.rm = TRUE)
@@ -390,7 +415,7 @@ nei_aqua_comp <- fao_production %>%
   mutate(source = if_else(SOURCE == 4, "wild_capture", "aquaculture")) %>% 
   left_join(spp_info) %>% 
   filter(excluded ==  "included", 
-         YEAR == 2016,
+         YEAR == 2018,
          id_level == "Nei") %>% 
   group_by(COUNTRY, source) %>% 
   summarise(
@@ -424,7 +449,7 @@ no_fao_species <- fao_production %>%
 
 no_fao_species <- fao_production %>% 
   left_join(spp_info) %>% 
-  filter(YEAR == 2016, 
+  filter(YEAR == 2018, 
          SOURCE == 4) %>% 
   group_by(id_level) %>% 
   summarise(
@@ -437,8 +462,7 @@ no_fao_species <- fao_production %>%
 total_comparisons <- fao_production %>% 
   mutate(source = if_else(SOURCE == 4, "wild_capture", "aquaculture")) %>% 
   left_join(spp_info) %>% 
-  filter(excluded ==  "included", 
-         YEAR == 2016) %>% 
+  filter(excluded ==  "included") %>% 
   group_by(id_level, source) %>% 
   summarise(
     tonnage = sum(QUANTITY, na.rm = TRUE)
@@ -463,7 +487,8 @@ country_prep2 <- fao_country %>%
 
 test100 <- fao_production %>% 
   left_join(spp_info) %>% 
-  filter(YEAR == 2016) %>% 
+  filter(YEAR == 2018) %>% 
+  filter(excluded == "included") %>% 
   group_by(COUNTRY) %>% 
   summarise(
     
@@ -495,43 +520,80 @@ max_val_y <- 17.5
 
 set_theme <- theme_classic()
 
+alpha_level = .7
+dot_size = 4
+
+color_pal_biplot = c("#F58F32", "#F5D751", "#F549AD", "#31CDF5", "#3E3DF5")
+
+
+test100$Continent_Group <- factor(test100$Continent_Group, 
+                                  levels = c("Asia", "Africa", "Americas", "Europe", "Oceania"))
 
 fresh_marine_biplot <- ggplot(test100, aes(x = log(marine_nei+1),
                     y = log(fresh_nei+1),
-                    color = Continent_Group,
-                    size = log(total_production+1)))+
+                    fill = Continent_Group#,
+                   # size = log(total_production+1)
+                    ))+
   set_theme+
+  scale_fill_manual(values=color_pal_biplot)+
   scale_x_continuous(limits = c(0,max_val_y))+
   scale_y_continuous(limits = c(0,max_val_y))+
-  geom_point()+
+  geom_point(alpha = alpha_level,
+             pch=21,
+             size = dot_size)+
   theme(legend.position = "none")+
   labs(
-    x="Marine NEI Log Tonnage",
-    y="Freshwater NEI Log Tonnage"
+    x="NEI Marine Production (log tonnes)",
+    y="NEI Freshwater Production (log tonnes)"
   )
 
 aq_wc_biplot <-ggplot(test100, aes(x = log(wild_capture_nei+1),
                     y = log(aquaculture_nei+1),
-                    color = Continent_Group,
-                    size = log(total_production+1)))+
+                    fill = Continent_Group#,
+                    #size = log(total_production+1)
+                    ))+
   set_theme+
+  scale_fill_manual(values=color_pal_biplot)+
   scale_x_continuous(limits = c(0,max_val_y))+
   scale_y_continuous(limits = c(0,max_val_y))+
-  geom_point()+
+  geom_point(alpha = alpha_level,
+             pch=21,
+             size = dot_size)+
   labs(
-    x="Wild Capture NEI Log Tonnage",
-    y="Aquaculture NEI Log Tonnage",
-    color ="Continent",
-    size = "Log(Total Production)"
-  )
+    x="NEI Wild Capture Production (log tonnes)",
+    y="NEI Aquaculture Production (log tonnes)",
+    fill ="Region",
+    size = "Total Production\n(log tonnes)"
+  )+ guides(fill = guide_legend(override.aes = list(size=5),
+                                title.hjust = 0.5),
+            size = guide_legend(title.hjust = 0.5))
 
-biplot_patches <- (fresh_marine_biplot|aq_wc_biplot)+
-  plot_layout(guides = 'collect')
+
+
+
+
+biplot_patches <- fresh_marine_biplot|aq_wc_biplot
+ # plot_layout(guides = 'collect')
   
+biplot_patches&
+  ggpubr::labs_pubr()
+
+figure_4 <- final_plot/biplot_patches+ 
+  plot_annotation(tag_levels = 'A')&
+  ggpubr::labs_pubr(base_size = 8)
 
 
-final_plot/biplot_patches+ 
-  plot_annotation(tag_levels = 'A')
+ggsave(plot = figure_4, 
+       device = "tiff",
+       filename = "figures/figure_4.tiff",
+       dpi = 300,
+       units = "cm",
+       width = 20,#13,
+       height = 15.4)#10)
+
+
+
+
 #### aquaculture numbers ####
 #------------------------------------------------------------------------------#
 
@@ -626,7 +688,92 @@ db_spp <- fao_production %>%
 
 chisq.test(db_spp)
 
+#### aq and wc overlap map ####
+#------------------------------------------------------------------------------#
+
+fao_overlap <- fao_production %>% 
+  left_join(spp_info) %>% 
+  filter(excluded == "included"&
+           id_level == "Species")
 
 
+countries_wc_species <- fao_overlap %>% 
+  filter(SOURCE == 4) %>% 
+  distinct(COUNTRY,YEAR, SPECIES) %>% 
+  mutate(wild_caught = "yes")
 
 
+countries_aq_species <- fao_overlap %>% 
+  filter(SOURCE != 4) %>% 
+  distinct(COUNTRY,YEAR, SPECIES) %>% 
+  left_join(countries_wc_species) %>% 
+  filter(wild_caught == "yes") %>% 
+  group_by(COUNTRY, YEAR) %>% 
+  summarise(
+    no_spp_aq_wc = n()
+  ) %>% 
+  left_join(country_prep) 
+
+no_countr_aq_sp <- countries_aq_species %>% 
+  distinct(COUNTRY, YEAR) %>% 
+  group_by(YEAR) %>% 
+  summarise(
+    no_spp_aq_wc = n()
+  )
+
+points <- ggplot(no_countr_aq_sp, aes(x = YEAR, y = no_spp_aq_wc))+
+  geom_point(size = 0.5)+
+  scale_y_continuous(limits = c(0,120), expand = c(0,0))+
+  geom_line()+
+  theme_minimal()+
+  labs(
+    y = "No. countries with >=1 species\nboth farmed and captured",
+    x = "Year"
+  )
+
+ggplot(countries_aq_species, aes(x = YEAR, y = no_spp_aq_wc))+
+  geom_jitter(alpha = .5)+
+  theme_minimal()+
+  labs(
+    y = "No of Species both\nFarmed and Captured"
+  )
+
+countries_data_for_overlap <- countries_aq_species %>% 
+  filter(YEAR == 2018)
+
+overlap_map <- world_raw %>% 
+  filter(poly_type == "GADM") %>% 
+  left_join(countries_data_for_overlap) %>% 
+  mutate(no_co = if_else(
+    is.na(no_spp_aq_wc), NA_real_,as.numeric(no_spp_aq_wc)
+  ))
+
+overlap_spp_plot <- ggplot(overlap_map, aes(fill = no_co))+
+  geom_sf(size = .1) +
+  theme_bw() +
+  scale_fill_viridis(direction = 1, 
+                     limits = c(1,32), 
+                     breaks = c(1, 10, 20, 30),
+                     option = "viridis")+
+  theme(axis.ticks = element_line(colour = "white"),
+        axis.text = element_text(color = "white"))+
+  labs(
+    fill = "No of Species both\nFarmed and Captured"
+  )+
+  #scale_fill_continuous()+
+  scale_x_continuous(expand = c(0,0))+
+  scale_y_continuous(expand = c(0,0))
+
+patch2<- points|overlap_spp_plot
+
+patch2_final <- patch2+plot_annotation(tag_levels = 'A')&
+ # ggpubr::labs_pubr()&
+  theme(text = element_text(size = 8))
+  
+ggsave(plot = patch2_final, 
+       device = "tiff",
+       filename = "figures/figure_2.tiff",
+       dpi = 300,
+       units = "cm",
+       width = 20,#15,
+       height = 17.3)#13)
