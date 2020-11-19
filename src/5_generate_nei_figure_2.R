@@ -176,12 +176,13 @@ prop_plot <- ggplot(over_time, aes(x = YEAR, y = prop_nei*100))+
   geom_smooth(method = "lm", color = "gray40")+
   labs(
     x = "Year", 
-    y = "Percent NEI"#,
+    y = "Global NEI\nCapture"#,
    # title = "A) Global Proportion of NEI Resolved Catch"
   )+
   ggpubr::theme_pubclean()+
   scale_x_continuous(expand = c(0,0))+
-  scale_y_continuous(limits = c(0,43))+
+  scale_y_continuous(limits = c(0,43),
+                     labels = function(x) paste0(x , '%'))+
   theme(
     axis.title.x = element_blank(),
     text = element_text(family = 'serif'),
@@ -193,7 +194,7 @@ box_plot <- ggplot(by_country, aes(x = YEAR, y = prop_nei, group = YEAR))+
   ggpubr::theme_pubclean()+
   labs(
     x = "Year", 
-    y = "Percent NEI"#,
+    y = "National NEI\nComposition"#,
     #title = "B) Median of NEI Resolved Catch for All Reporting Countries"
   )+
   scale_x_continuous(expand = c(0,0))+
@@ -201,7 +202,8 @@ box_plot <- ggplot(by_country, aes(x = YEAR, y = prop_nei, group = YEAR))+
     axis.title.x = element_blank(),
     text = element_text(family = 'serif'),
     plot.title.position = "plot"
-  )
+  )+
+  scale_y_continuous(labels = function(x) paste0(x , '%'))
 
 region_palette = (c("#F58F32", "#F5D751", "#F549AD", "#31CDF5", "#3E3DF5"))
 
@@ -220,7 +222,8 @@ by_region <- ggplot(country_contrib, aes(x=YEAR, y=perc, fill=region_new)) +
     plot.title.position = "plot",
     legend.title = element_blank(),
     legend.position = "bottom"
-  )
+  )+
+  scale_y_continuous(labels = function(x) paste0(x , '%'))
 
 
 figure_3 <- prop_plot/box_plot/by_region &

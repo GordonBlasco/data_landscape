@@ -1,64 +1,56 @@
-scientificname,commonname,FisheryType
-Sebastes fasciatus,Acadian redfish,Rockfish
-Pleuronectes quadrituberculatus,Alaska plaice,Flatfish
-Bathyraja parmifera,Alaska skate,Sharks Rays and Skates
-Clupeonella engrauliformis,Anchovy kilka,Forage Fish
-Theragra chalcogramma,Walleye pollock,Gadids
-Pandalus eous,Alaskan pink shrimp,Invertebrate
-Decapterus muroadsi,Amberstripe scad,Forage Fish
-Centroberyx gerrardi,Bight redfish,Other Marine
-Makaira mazara,Indo-Pacific blue marlin,Tuna and Marlin
-Sebastes paucispinis,Bocaccio,Rockfish
-Sebastes auriculatus,Brown rockfish,Rockfish
-Thamnaconus modestus,Black scraper,Other Marine
-Dipturus laevis,Barndoor skate,Sharks Rays and Skates
-Scorpaena guttata,California scorpionfish,Other Marine
-Clupea bentincki,Chilean herring,Forage Fish
-Pristipomoides filamentosus,Crimson jobfish,Other Marine
-Raja eglanteria,Clearnose skate,Sharks Rays and Skates
-Platycephalus conatus,Deepwater flathead,Other Marine
-Sebastes variabilis,Dusky rockfish,Rockfish
-Hippoglossoides dubius,Flathead flounder,Flatfish
-Etelis coruscans,Flame snapper,Other Marine
-Epinephelus itajara,Goliath grouper,Other Marine
-Sebastes norvegicus,Golden Redfish,Rockfish
-Enteroctopus dofleini,Giant Pacific octopus,Invertebrate
-Strongylocentrotus droebachiensis,Green sea urchin,Invertebrate
-Branchiostegus japonicus,Horsehead tilefish,Other Marine
-Paracaesio caerulea,Japanese snapper,Other Marine
-Sebastolobus macrochir,Kichiji rockfish,Rockfish
-Pristipomoides sieboldii,Lavender jobfish,Other Marine
-Raja rhina,Longnose skate,Sharks Rays and Skates
-Sebastes polyspinis,Northern rockfish,Rockfish
-Lepidopsetta polyxystra,Northern rock sole,Flatfish
-Chrysophrys auratus,New Zealand snapper,Other Marine
-Cleisthenes herzensteini,Pointhead flounder,Flatfish
-Ammodytes hexapterus,Pacific sand lance,Forage Fish
-Sebastes maliger,Quillback rockfish,Rockfish
-Glyptocephalus zachirus,Rex sole,Flatfish
-Sebastes aleutianus,Rougheye rockfish,Rockfish
-Eopsetta grigorjewi,Round-nose flounder,Flatfish
-Leucoraja garmani,Rosette skate,Sharks Rays and Skates
-Clidoderma asperrimum,Roughscale sole,Flatfish
-Epigonus crassicaudus,Deepwater cardinalfish,Other Marine
-Oratosquilla oratoria,Shako,Invertebrate
-Sebastes zacentrus,Sharpchin rockfish,Rockfish
-Malacoraja senta,Smooth skate,Sharks Rays and Skates
-Squalus suckleyi,Spotted spiny dogfish,Sharks Rays and Skates
-Loligo bleekeri,Spear squid,Invertebrate
-Sebastes borealis,Shortraker rockfish,Rockfish
-Pandalopsis dispar,Sidestripe shrimp,Invertebrate
-Uroteuthis edulis,Swordtip squid,Invertebrate
-Sillago flindersi,School whiting,Other Marine
-Pseudocarcinus gigas,Tasmanian giant crab,Invertebrate
-Neoplatycephalus richardsoni,Tiger flathead,Other Marine
-Tanakius kitaharae,Willowy flounder,Flatfish
-Leucoraja ocellata,Winter skate,Sharks Rays and Skates
-Lophius litulon,Yellow goosefish,Other Marine
-Pseudopleuronectes herzensteini,Yellow striped flounder,Flatfish
-Takifugu rubripes,Japanese pufferfish,Other Marine
-Seriola quinqueradiata,Japanese amberjack,Other Marine
-Pagrus major,Red seabream,Other Marine
-Dentex tumifrons,Yellow sea bream,Other Marine
-Penaeus esculentus,Brown tiger shrimp,Invertebrate
-Haliotis iris,black foot paua,Invertebrate
+scientificname,commonname,FisheryType,farmed_only
+Sebastes fasciatus,Acadian redfish,Rockfish,NA
+Bathyraja parmifera,Alaska skate,Sharks Rays and Skates,NA
+Clupeonella engrauliformis,Anchovy kilka,Forage Fish,NA
+Centroberyx gerrardi,Bight redfish,Other Marine,NA
+Sebastes paucispinis,Bocaccio,Rockfish,NA
+Sebastes auriculatus,Brown rockfish,Rockfish,NA
+Thamnaconus modestus,Black scraper,Other Marine,NA
+Dipturus laevis,Barndoor skate,Sharks Rays and Skates,NA
+Scorpaena guttata,California scorpionfish,Other Marine,NA
+Pristipomoides filamentosus,Crimson jobfish,Other Marine,NA
+Raja eglanteria,Clearnose skate,Sharks Rays and Skates,NA
+Sepia spp,Cuttlefish,Invertebrate,NA
+Platycephalus conatus,Deepwater flathead,Other Marine,NA
+Sebastes variabilis,Dusky rockfish,Rockfish,NA
+Etelis coruscans,Flame snapper,Other Marine,NA
+Pomadasys spp,Grey grunt,Other Marine,NA
+Epinephelus itajara,Goliath grouper,Other Marine,NA
+Enteroctopus dofleini,Giant Pacific octopus,Invertebrate,NA
+Strongylocentrotus droebachiensis,Green sea urchin,Invertebrate,NA
+Branchiostegus japonicus,Horsehead tilefish,Other Marine,NA
+Paracaesio caerulea,Japanese snapper,Other Marine,NA
+Sebastolobus macrochir,Kichiji rockfish,Rockfish,NA
+Pristipomoides sieboldii,Lavender jobfish,Other Marine,NA
+Raja rhina,Longnose skate,Sharks Rays and Skates,NA
+Sebastes polyspinis,Northern rockfish,Rockfish,NA
+Cleisthenes herzensteini,Pointhead flounder,Flatfish,NA
+Ammodytes hexapterus,Pacific sand lance,Forage Fish,NA
+Sebastes maliger,Quillback rockfish,Rockfish,NA
+Glyptocephalus zachirus,Rex sole,Flatfish,NA
+Sebastes aleutianus,Rougheye rockfish,Rockfish,NA
+Eopsetta grigorjewi,Round-nose flounder,Flatfish,NA
+Leucoraja garmani,Rosette skate,Sharks Rays and Skates,NA
+Clidoderma asperrimum,Roughscale sole,Flatfish,NA
+Epigonus crassicaudus,Deepwater cardinalfish,Other Marine,NA
+Oratosquilla oratoria,Shako,Invertebrate,NA
+Sebastes zacentrus,Sharpchin rockfish,Rockfish,NA
+Malacoraja senta,Smooth skate,Sharks Rays and Skates,NA
+Cynoglossus spp,Sole,Flatfish,NA
+Squalus suckleyi,Spotted spiny dogfish,Sharks Rays and Skates,NA
+Loligo bleekeri,Spear squid,Invertebrate,NA
+Sebastes borealis,Shortraker rockfish,Rockfish,NA
+Pandalopsis dispar,Sidestripe shrimp,Invertebrate,NA
+Uroteuthis edulis,Swordtip squid,Invertebrate,NA
+Sillago flindersi,School whiting,Other Marine,NA
+Pseudocarcinus gigas,Tasmanian giant crab,Invertebrate,NA
+Neoplatycephalus richardsoni,Tiger flathead,Other Marine,NA
+Tanakius kitaharae,Willowy flounder,Flatfish,NA
+Leucoraja ocellata,Winter skate,Sharks Rays and Skates,NA
+Lophius litulon,Yellow goosefish,Other Marine,NA
+Takifugu rubripes,Japanese pufferfish,Other Marine,yes
+Seriola quinqueradiata,Japanese amberjack,Other Marine,yes
+Pagrus major,Red seabream,Other Marine,yes
+Dentex tumifrons,Yellow sea bream,Other Marine,yes
+Penaeus esculentus,Brown tiger shrimp,Invertebrate,yes
+Haliotis iris,black foot paua,Invertebrate,yes

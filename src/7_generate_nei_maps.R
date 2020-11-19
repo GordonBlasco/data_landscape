@@ -46,7 +46,18 @@ spp_info <- fao_neis %>%
          (str_detect(string = ISSCAAP_Group, regex("freshwater", ignore_case = TRUE)) | 
           str_detect(string = CPC_Class, regex("freshwater", ignore_case = TRUE)) |
           str_detect(string = Name_En, regex("freshwater", ignore_case = TRUE))),
-         "Freshwater", "Marine"))
+         "Freshwater", "Marine")) %>% 
+  mutate(habitat_fixed = case_when(habitat == "Freshwater"~ "Freshwater",
+                                   habitat == "Marine ~" ~ "Marine",
+                                   T ~ "Marine")) %>% 
+  select(-habitat) %>% 
+  rename(habitat = habitat_fixed)
+
+no_marine_and_fresh <- spp_info %>% 
+  filter(id_level == "Species",
+         excluded == "included") %>% 
+  group_by(habitat) %>% 
+  summarise(n = n())
 
 # link up ISO3 codes
 country_prep <- fao_country %>% 
@@ -56,6 +67,7 @@ country_prep <- fao_country %>%
     COUNTRY = UN_Code
   )
 
+max_val_y <- 8
 #### Calcuate national freshwater NEI's and totals ####
 #------------------------------------------------------------------------------#
  
@@ -129,14 +141,14 @@ test_2 <- st_set_geometry(map_marine, NULL)
 #------------------------------------------------------------------------------#
 
 # nei tonnage plot
-fresh_plot <- ggplot(map_freshwater, aes(fill = log(total_landed+1)))+
+fresh_plot <- ggplot(map_freshwater, aes(fill = log10(total_landed+1)))+
   geom_sf(size = .1) +
   theme_bw() +
   theme(axis.ticks = element_line(colour = "white"),
         axis.text = element_text(color = "white"))
 
 
-marine_plot <- ggplot(map_marine, aes(fill = log(total_landed+1)))+
+marine_plot <- ggplot(map_marine, aes(fill = log10(total_landed+1)))+
   geom_sf(size = .1) +
   theme_bw() +
   theme(axis.ticks = element_line(colour = "white"),
@@ -163,7 +175,7 @@ patches <- (fresh_plot  + plot_layout(guides = 'keep')) +
 
 patches <- patches & 
   #theme_bw() &
-  scale_fill_viridis(direction = 1, limits = c(0, 16.5), option = "magma") &
+  scale_fill_viridis(direction = 1, limits = c(0, max_val_y), option = "magma") &
   scale_y_continuous(expand = c(0,0)) &
   scale_x_continuous(expand = c(0,0)) &
   #theme(axis.ticks = element_line(colour = "white"),
@@ -515,8 +527,9 @@ test100 <- fao_production %>%
   left_join(country_prep2) %>% 
   filter(!is.na(Continent_Group))
 
-max_val_y <- log(max(test100$total_production) + 1)
+max_val_y <- log10(max(test100$total_production) + 1)
 max_val_y <- 17.5
+max_val_y <- 8
 
 set_theme <- theme_classic()
 
@@ -529,8 +542,8 @@ color_pal_biplot = c("#F58F32", "#F5D751", "#F549AD", "#31CDF5", "#3E3DF5")
 test100$Continent_Group <- factor(test100$Continent_Group, 
                                   levels = c("Asia", "Africa", "Americas", "Europe", "Oceania"))
 
-fresh_marine_biplot <- ggplot(test100, aes(x = log(marine_nei+1),
-                    y = log(fresh_nei+1),
+fresh_marine_biplot <- ggplot(test100, aes(x = log10(marine_nei+1),
+                    y = log10(fresh_nei+1),
                     fill = Continent_Group#,
                    # size = log(total_production+1)
                     ))+
@@ -547,8 +560,8 @@ fresh_marine_biplot <- ggplot(test100, aes(x = log(marine_nei+1),
     y="NEI Freshwater Production (log tonnes)"
   )
 
-aq_wc_biplot <-ggplot(test100, aes(x = log(wild_capture_nei+1),
-                    y = log(aquaculture_nei+1),
+aq_wc_biplot <-ggplot(test100, aes(x = log10(wild_capture_nei+1),
+                    y = log10(aquaculture_nei+1),
                     fill = Continent_Group#,
                     #size = log(total_production+1)
                     ))+
