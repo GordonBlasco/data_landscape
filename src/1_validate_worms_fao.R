@@ -1,3 +1,5 @@
+# Lightly adapted from code originally written by Juan Mayorga.
+
 # 1. Setup
 library(tidyverse)
 library(rredlist)
